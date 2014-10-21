@@ -1,0 +1,32 @@
+
+<h1 class="title"> 
+  <span class="title_left">添加</span>
+  <span class="title_right"><a href="/admin/home/images">返回</a></span>
+</h1>
+
+<%=form_for "home",:url=>:upload_image_admin_home_index ,:html=>{:class=> "form-horizontal" ,:role=>"form"} do |f|%>
+
+<table class="grid">
+
+    <tr>
+     <td class="right">标题</td>
+     <td  class="left"><input type="text" size=85 name="home[title]" ></td>
+    </tr>
+    <tr>
+     <td  class="right">链接</td>
+     <td  class="left"> <input type="text" size=85  name="home[url]" ></td>
+    </tr>
+    <tr>
+     <td  class="right">图片</td>
+     <td  class="left">  <%=f.file_field :image %></td>
+    </tr>
+     <tr>
+   
+     <td  colspan="2">  <button type="submit" class="btn btn-default">提 交 </button></td>
+    </tr>
+
+
+
+
+ 
+<%end%>

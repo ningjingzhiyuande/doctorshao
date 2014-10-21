@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title></title>
+  <%= stylesheet_link_tag    "admin/application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "admin/application", "data-turbolinks-track" => true %>
+  <%= yield :header %>
+
+
+	<!--[if IE 6]>
+	<%= stylesheet_link_tag "ie6", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag    "pngfix",  "data-turbolinks-track" => true %>
+
+	<script>
+	  /* EXAMPLE */
+	  DD_belatedPNG.fix('.logo, .other ul#dashboard-buttons li a');
+
+	</script>
+	<![endif]-->
+	<!--[if IE 7]>
+	<%= stylesheet_link_tag "ie7", "data-turbolinks-track" => true %>
+	
+	<![endif]-->
+
+</head>
+<body>
+	<div id="header">
+		<div id="top-menu">
+				
+			<span>您好，<a href="#" title="Logged in as admin"><%#=current_user.name%></a></span>
+			
+			| <a href="/users/logout" title="Logout">退出</a>
+		</div>
+		<div id="sitename">
+			<!--<a href="index.html" class="logo float-left" title="JsAdmin">JsAdmin</a>
+			<div class="button float-right">
+				<a href="#" id="dialog_link" class="btn ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>打开对话框</a>
+				<a href="#" id="login_dialog" class="btn ui-state-default ui-corner-all"><span class="ui-icon ui-icon-image"></span>登录框</a>
+			</div>
+			<div id="login" title="Members Login">
+				<form action="#" method="post" enctype="multipart/form-data" class="forms" name="form" >
+					<ul>
+						<li>
+							<label for="email" class="desc">
+								邮箱:
+							</label>
+							<div>
+								<input type="text" tabindex="1" maxlength="255" value="" class="field text full" name="email" id="email" />
+							</div>
+						</li>
+						<li>
+							<label for="password" class="desc">
+								密码:
+							</label>
+							<div>
+								<input type="text" tabindex="1" maxlength="255" value="" class="field text full" name="password" id="password" />
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div id="dialog" title="Dialog Title">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>-->
+		</div>
+		<ul id="navigation" class="sf-navbar">
+		
+		
+			<li>
+				<a href="/home/images">首页设置</a>
+				
+			</li>
+
+			<li>
+			  <a href="/">请假流程</a>
+				
+			</li>
+			<li>
+				<a href="/">用户管理</a>
+				
+			</li>
+		</ul>
+	</div>	<!--<div id="welcome" title="Welcome to JsAdmin">
+		<p><b>JsAdmin</b> is a <b>lightweight</b>, fully and easily customisable <b>administration user interface</b>. Please proceed to the actual demo by clicking the button below. Enjoy !</p>
+	</div>-->
+
+
+
+
+<div id="page-wrapper">
+
+  <%=yield%>
+
+</div>
+</body>
+<%=yield :footer%>
+
+</html>
+

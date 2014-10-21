@@ -1,0 +1,30 @@
+.about01_body{ background: #d9def4;}
+.wrap_about01{ width: 1010px;  margin:0 auto; overflow: hidden;
+ background: url(/images/about1_wrap_bk.png) repeat-x top;} 
+.park01{ background: url(/images/bk24.png); width: 1010px; height: 223px;}
+.park01 p{ font-size: 14px; color: #666666; margin-left: 100px;; padding-right: 30px;  line-height: 26px;;}
+.park02{ width: 100%; height: 285px;  background: url(/images/bk25.png);  overflow: hidden;}
+.park02 p{ width: 410px; margin:130px 40px; float: left; display: inline; color: #666666; font-size: 14px; line-height: 26px;;}
+.park_header{ width: 100%; height: 131px;  overflow: hidden;}
+.park03,.park04,.park05{ background: #eaecf9; overflow: hidden;}
+
+.in_tsxmlist ul li { width:485px; padding-left:15px; float:left; margin-top:30px;}
+.in_tsxmlist ul li .imgbox{ float:left; width:150px; height:102px; border: #FFFFFF solid 1px; overflow:hidden}
+.in_tsxmlist .numberbox{ font-size:52px;  font-family:Impact; color:#d2d2d2; padding:0px 10px; width:52px; height:102px; float:left}
+.in_tsxmlist .desbox{ float:left; width:240px; height:102px; }
+.in_tsxmlist .desbox h2{ height:30px; line-height:14px;}
+.in_tsxmlist .desbox h2 a{ font-size:14px; color:#6e2c90;  }
+
+.in_tsxmlist .desbox p{ font-size:12px; line-height:20px; font-family:"宋体"; color:#747474}
+
+
+.park04_content img{ float: left; }
+.park06{ color: #d9def4;}
+
+.park05_content{  border: #FFFFFF solid 1px;} 
+.park05_content_foot{ width: 100%; height: 28px;  background: url(/images/about1_26.png);}
+.park05_content_left{ width: 570px; padding: 50px; float: left;}
+.park05_content_video{ width: 334px; height: 276px; float:left;}
+
+
+.park06_content { text-align: center; background: url(/images/park04_bk.png) repeat-x;}

@@ -1,0 +1,141 @@
+<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					<%=@title%> 
+					</h3>
+					
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+ <%=render  "/layouts/admin/notice"%>
+
+
+            <div class="row">
+				<div class="col-md-12">
+					
+						
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_0">
+								<div class="portlet box green">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-gift"></i> <%=title%>
+										</div>
+										<div class="tools">
+											<a href="javascript:;" class="collapse">
+											</a>
+											
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<%=form_for [:admin,@home],:html=>{:class=> "form-horizontal home_image" ,:role=>"form"} do |f|%>
+										
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-2 control-label">标题:</label>
+													<div class="col-md-4">
+													    <%=f.text_field :title ,class: "form-control"  %>
+														
+														
+													</div>
+												</div>
+												<%if @home.flag=="home_welcome"%>
+
+												<div class="form-group">
+
+													<label class="control-label col-md-2">发布日期</label>
+													<div class="col-md-9">
+														<div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd" >
+														<%=f.text_field :publish_at,class: "form-control"%>
+												
+												     <span class="input-group-btn">
+												     <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												    </span>
+											          </div>
+											       </div>
+												
+												</div>
+												<%else%>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label">链接:</label>
+													<div class="col-md-9">
+													       <%=f.text_field :url ,class: "form-control"  %>
+													</div>
+												</div>
+												<%end%>
+												<%if @home.flag=="home_image"%>
+												<div class="form-group">
+													<label class="col-md-2 control-label">图片:</label>
+													<div class="col-md-4">
+													   <%=f.file_field :image %>  
+														<%= image_tag(@home.image_url ,width:200,height:200) if @home.image? %>		
+													</div>
+												</div>
+												<%end%>
+												
+												
+											<div class="form-actions fluid">
+												<div class="col-md-offset-3 col-md-9">
+													<button type="submit" class="btn blue">修改</button>
+												
+												</div>
+											</div>
+											</div>
+										<%end%>
+
+										<!-- END FORM-->
+									</div>
+								</div>
+
+                          </div>
+                          </div>
+                            </div>
+                          </div>
+		
+
+
+		</div>
+	</div>
+	<!-- END CONTENT -->
+
+<script>
+  ComponentsPickers.init();
+  $(".go_up").click(function(){
+    var val =  $(this).attr("id");
+    $.post("/admin/home/"+val+"/move",{"move_type":"up"},function(data){alert(data["data"]); location.replace(location.href);})
+ 
+  })
+  $(".go_down").click(function(){
+    var val =  $(this).attr("id");
+    $.post("/admin/home/"+val+"/move",{"move_type":"down"},function(data){alert(data["data"]); location.replace(location.href);})
+ 
+  })
+  //$.noConflict();
+jQuery(document).ready(function() { 
+          
+
+           
+            jQuery('.home_image').validate({
+ 
+                rules: {
+                    "home[title]": {
+                        minlength: 2,
+                        required: true
+                    }
+                submitHandler: function (form) {
+                	$(form).submit();                  
+                }
+            });
+
+
+})
+  
+</script>
