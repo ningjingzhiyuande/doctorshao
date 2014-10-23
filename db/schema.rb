@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020030322) do
+ActiveRecord::Schema.define(version: 20141022084354) do
+
+  create_table "contents", force: true do |t|
+    t.string   "item_id"
+    t.string   "item_type"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contents", ["item_id", "item_type"], name: "index_contents_on_item_id_and_item_type", using: :btree
 
   create_table "homes", force: true do |t|
     t.string   "title"
@@ -25,5 +35,25 @@ ActiveRecord::Schema.define(version: 20141020030322) do
   end
 
   add_index "homes", ["flag"], name: "index_homes_on_flag", using: :btree
+
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.string   "kind"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["kind"], name: "index_pages_on_kind", using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.string   "short_title"
+    t.text     "info"
+    t.boolean  "is_special",  default: false
+    t.string   "image"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

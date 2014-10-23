@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'acts_as_tree'
+gem 'acts_as_list'
+
 gem 'rails_kindeditor'
 
 gem 'carrierwave'
@@ -57,7 +60,7 @@ gem 'capistrano-bundler'
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

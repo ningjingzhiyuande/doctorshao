@@ -14,6 +14,7 @@ class Admin::HomeController < Admin::ApplicationController
   def create
   	 @home = Home.new(admin_home_params)
   	 action,title = return_action_name(@home.flag)
+  	 binding.pry
     respond_to do |format|
       if @home.save
         format.html { redirect_to "/admin/home/"+action, notice: '添加成功' }
@@ -95,13 +96,13 @@ class Admin::HomeController < Admin::ApplicationController
   	    when "home_image"
   	 	  ["images","首页轮播图管理"]
   	    when "home_video"
-  	   	  ["video","视频管理"]
+  	   	  ["video","首页视频管理"]
   	    when "home_friends"
   	 	  ["friends","友情链接管理"]
   	    when "qa"
   	 	   ["qa","赴美疑问管理"]
   	 	when "abc_huaxu"
-  	 		['huaxu','ABC花絮管理']
+  	 		['huaxu','首页左侧图片管理']
   	 	when "home_welcome"
   	 	   ["","欢迎和祝福"]
   	 	   	

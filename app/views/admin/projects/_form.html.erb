@@ -1,0 +1,81 @@
+
+<%= form_for([:admin,@project],:html=>{:class=>"project_form"}) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this leafe from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<ul>
+	<li> 
+		<span class="width_align_right">项目名称</span> 
+       <span class="width_content">
+       	<%=f.text_field :name,class: "field error project_title text large"%>
+       	<%=f.hidden_field :is_special,value: true%>
+       </span>
+    </li>
+    <li> 
+		<span class="width_align_right">项目简介 </span> 
+       <span class="width_content">
+       	<%=f.kindeditor :info, :simple_mode => true, :width => 700, :height => 100 %>
+       </span>
+    </li>
+    
+ 
+ 
+    
+
+
+     <li> 
+		<span class="width_align_right">项目内容 </span>
+		<span class="width_content"><%= f.fields_for :content,(@project.content || Content.new ) do |c|%>
+                  <%=c.kindeditor :body,:height=>650%>
+		<%end%>
+	</span>
+		
+        
+       
+    </li>
+     <li> 
+		<span class="width_align_right">首页小图 </span>
+        <div><%=f.file_field :image%>
+       </div>
+    </li>
+</ul>
+ 
+  <div class="actions">
+    <%= f.submit '提交'%>
+  </div>
+<% end %>
+
+	
+<script>
+$(function() {
+
+    $(".project_form").validate({
+    	errorElement: "b",
+        rules: {
+       	 "project[name]": "required",
+       	 "project[info]": "required",
+         "project[content_attributes][body]": "required",
+         "project[image]": "required"
+
+        },
+       messages:{
+        "project[name]":"不能为空",
+        "project[info]": "不能为空",
+         "project[content_attributes][body]": "不能为空",
+        "project[image]": "请选择图片"
+    }})
+
+
+
+})
+</script>
+
+

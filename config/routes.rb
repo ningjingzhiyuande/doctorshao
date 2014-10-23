@@ -1,10 +1,14 @@
 Doctorshao::Application.routes.draw do
 
-
+  get "admin"=>"admin/home#images"
+  resources :projects
+  resources :pages
 
   root "home#index"
 
   namespace :admin do 
+  	 resources :pages
+  	 resources :projects
      resources :home do
       collection do 
        get :images

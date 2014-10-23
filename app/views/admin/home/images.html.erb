@@ -32,7 +32,7 @@
 
 	 <li style-"margin-top:10px;"> 
 		<span class="width_align_right">&nbsp;</span> 
-		<span class="width_content"> <%=f.submit "提交" %>  </span>
+		<span class=""> <%=f.submit "提交" %>  </span>
 	</li>													
 
 
@@ -61,13 +61,14 @@
 						</tr> 
 						</thead> 
 						<tbody> 
-						<% @images.each do |user| %>
+						<% @images.each do |image| %>
 					
 					         <tr>
                 
                    <td><%= image.id%></td>
-                   <td><%= editable_field image, :title,:update_url=>"/admin/home/#{image.id}" ,width: 90,height:30%></td>
-                   <td><%=editable_field image, :url,:update_url=>"/admin/home",width: 250,height:150%></td>
+                   <td><%= image.title%></td>
+                   <td><%= image.url%></td>
+              
                    <td><%=image_tag(image.image_url,width: '200',height: '90')%></td>
                    <td>
                   <%unless image.first?%>
@@ -115,7 +116,24 @@ $('#datatable').dataTable({
       }
   }
 
-})  
+}) 
+
+
+  $('.home_image').validate({
+    errorElement: "b",
+    rules: {
+        "home[title]": "required",
+        "home[image]": "required",
+        "home[url]": "required"
+     },
+    messages:{
+        "home[title]":"不能为空",
+        "home[url]": "不能为空",
+        "home[image]": "请选择图片"
+    }
+     });
+
+
 })
 </script>
 
@@ -131,36 +149,5 @@ $('#datatable').dataTable({
     $.post("/admin/home/"+val+"/move",{"move_type":"down"},function(data){alert(data["data"]); location.replace(location.href);})
  
   })
-  //$.noConflict();
-jQuery(document).ready(function() { 
-
-
-           
-            jQuery('.home_image').validate({
- 
-                rules: {
-                    "home[title]": {
-                        minlength: 2,
-                        required: true
-                    },
-                    "home[url]": {
-                        minlength: 2,
-                        required: true,
-                        url:true  
-                    },
-
-                    "home[image]": {
-                        minlength: 2,
-                        required: true
-                    }
-                },
-
-                submitHandler: function (form) {
-                	$(form).submit();                  
-                }
-            });
-
-
-})
   
 </script>
