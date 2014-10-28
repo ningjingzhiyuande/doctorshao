@@ -31,7 +31,7 @@
 .park03 header h2{ color: #FFFFFF; font-size: 30px;;}
 
 .park03_btn_box{ width: 120px; height: 42px; position: absolute; right: 0px; top: 20px;}
-.park03_btn_box ul li{ float: left; width: 42px; height: 42px; font-size: 0px; color: #925cbf; margin: 0px 5px; display:inline; cursor: pointer;}
+.park03_btn_box ul li{ float: left; overflow:hidden; width: 42px; height: 42px; font-size: 0px; color: #925cbf; margin: 0px 5px; display:inline; cursor: pointer;}
 .park03_btn_box ul li.park03_left_Btn{ background: url(/images/about02_park03_left.png);}
 .park03_btn_box ul li.park03_right_Btn{ background: url(/images/about02_park03_right.png);}
 .park03_btn_box ul li.park03_left_Btn:hover{background: url(/images/about02_park03_left_cur.png);}
@@ -40,12 +40,21 @@
 
 .park03_content{ width: 1010px; height:234px; overflow: hidden ; position: relative;}
 #park03_scrollul{ position: absolute; top: 0px; left: 0px; width: 5000px;}
-#park03_scrollul li{ float: left; width:260px; height: 234px; margin:0px 36px; background: url(/images/bk51.png) no-repeat center top;}
+#park03_scrollul li{ float: left; width:260px; height: 234px; overflow:hidden; margin:0px 36px; background:url(/images/bk51.png) no-repeat center top;}
 #park03_scrollul li img{ margin: 5px;}
 #park03_scrollul  h3{ text-align:center; line-height: 50px; font-weight: normal; }
 #park03_scrollul  h3 a{ color: #fddb77; font-size: 20px;;}
 
 
+.park04_jzlc{ width:1010px; height:255px; position:relative }
+.park04_jzlc ul{ width:1010px; height:255px; position:absolute; left:0px; top:0px;}
+.park04_jzlc ul li i{ width:80px; height:80px;  font-size:52px; font-family:"Impact"; font-style:normal; color:#a8a8a8; float:left; margin-left:70px;
+}
+.park04_jzlc ul li p{ line-height:26px; padding-top:5px; color:#666}
+.park04_jzlc ul li{ width:305px; height:80px; padding-top:32px; float:left; margin:0px 100px; display:inline}
+.park04_jzlc .zxzx{ width:260px; height:255px;position:absolute; top:0px; left:380px;}
+.park04_jzlc .zxzx .zxzx_btn{ display:block ; width:260px; height:160px;}
+.park04_jzlc .zxzx  h3{ height:56px; line-height:56px; text-align:center; font-family:"DaunPenh"; font-size:42px; color:#fff}
 .park05{ background: #e6e0ec url(/images/bk47.gif) no-repeat center; height: 500px;}
 
 .park05_content p{ width:690px; padding: 0px 20px; line-height: 26px; font-size: 14px; color: #666666;}
@@ -53,5 +62,15 @@
 
 .park06_content img{ display: block; margin: 0 auto;}
 
-
-
+.park06_xmnr{ width:850px; height:455px; position:relative}
+.park06_xmnr h2{ position:absolute; width:250px;}
+.park06_xmnr h2 a{ color:#c49ee3 ; font-weight:normal; font-size:20px;}
+.h2_02,.h2_04,.h2_06,.h2_08{ text-align:right; }
+.h2_01{ top:35px; left:50px;}
+.h2_02{ top:35px; right:150px;}
+.h2_03{ top:155px;left:70px;}
+.h2_04{top:150px;right:40px;}
+.h2_05{ top:275px;left:70px;}
+.h2_06{top:275px;right:70px;}
+.h2_07{ bottom:20px;left:190px;}
+.h2_08{bottom:20px;right:70px;}

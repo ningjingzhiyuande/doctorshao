@@ -4,7 +4,15 @@
 .park01{ background: url(/images/bk24.png); width: 1010px; height: 223px;}
 .park01 p{ font-size: 14px; color: #666666; margin-left: 100px;; padding-right: 30px;  line-height: 26px;;}
 .park02{ width: 100%; height: 285px;  background: url(/images/bk25.png);  overflow: hidden;}
-.park02 p{ width: 410px; margin:130px 40px; float: left; display: inline; color: #666666; font-size: 14px; line-height: 26px;;}
+.park02_right,.park02_left{ width:410px; float:left; margin:10px 40px; display:inline}
+
+.park02 h2{ position:relative; height:76px; line-height:76px; font-size:26px; color:#7c1676 ; font-weight:normal}
+.park02 h2 img{ display:block; float:left;  border:#9d5ac4 solid 4px; margin-right:20px; display:inline}
+
+.park02_h2_span01{ background:url(/images/artical01.png);width:76px; height:76px; top:0px; left:0px}
+.park02_h2_span02{ background:url(/images/artical02.png);width:76px; height:76px; top:0px; left:0px}
+
+.park02 p{ width: 410px;   color: #666666; font-size: 14px; line-height: 26px;}
 .park_header{ width: 100%; height: 131px;  overflow: hidden;}
 .park03,.park04,.park05{ background: #eaecf9; overflow: hidden;}
 
@@ -17,14 +25,47 @@
 
 .in_tsxmlist .desbox p{ font-size:12px; line-height:20px; font-family:"宋体"; color:#747474}
 
+.park04_content{ width:100%; overflow:hidden;background:url(/images/bk33.png) repeat-x}
 
-.park04_content img{ float: left; }
+.park04 .park_header{ position:relative}
+.park04 .park_zxrx{ position:absolute; right:0px; padding-right:20px; top:85px; font-size:28px; font-style:italic; color:#9c498d;
+   -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(218,135,199,0.5)), to(rgba(129,48,104,1))); 
+}
+.park04_left{ width:380px; float:left}
+.park04_right{ width:626px; float:left; background:url(/images/linkbk.png) no-repeat center}
+.park04_right ul li{ float:left; width:156px; overflow:hidden} 
+
+.park04_right_imgbox{ width:132px; height:132px;margin:0 auto; position:relative}
+.park04_right_imgbox_span{ width:132px; height:132px; background:url(/images/artical03.png) no-repeat center; top:0px; left:0px;}
+
+.park04_right ul li i{ display:block; position:relative ; width:42px; height:42px; background:#FFF;  text-align:center; line-height:42px; font-style:normal; margin:8px auto}
+
+.park04_right_spani{ display:block; width:42px; height:42px; top:0px; left:0px; background:url(/images/artical04.png)}
+
+.park04_right ul li img{ display:block;  margin:1px }
+.park04_right ul li h3{ padding-left:40px; font-size:16px; font-weight:normal; color:#6b528b}
 .park06{ color: #d9def4;}
 
 .park05_content{  border: #FFFFFF solid 1px;} 
 .park05_content_foot{ width: 100%; height: 28px;  background: url(/images/about1_26.png);}
-.park05_content_left{ width: 570px; padding: 50px; float: left;}
+.park05_content_left{ width: 600px; float: left; padding:40px 0px 0px 20px;}
+.park05_content_left ul li{ width:284px; height:94px; float:left}
+.park05_content_left ul li div{ float:left}
+.park05_content_left ul li .park05_content_des{ width:150px; padding-left:6px; height:94px; background:#ab95ca}
+.park05_content_left ul li .park05_content_des time{ color:#fff; font-weight:bold; font-size:24px; height:38px; line-height:38px;}
+.park05_content_left ul li .park05_content_des p{ font-size:14px; color:#FFF}
+.park05_content_left ul li .park05_content_img{ width:128px; height:94px; overflow:hidden;}
 .park05_content_video{ width: 334px; height: 276px; float:left;}
 
 
-.park06_content { text-align: center; background: url(/images/park04_bk.png) repeat-x;}
+.park06_bk{background: url(/images/about01_park06bk.png) repeat-x;}
+.park06_content{ width:100%; height:500px; background:url(/images/bk30.png) no-repeat  top left; overflow:hidden }
+
+.park06_content h2{ position:relative; color:#705990; height:50px; width:240px; margin-top:12px; background:url(/images/about1_park06h2_bk.png) no-repeat center bottom; text-align:center ; line-height:50px; font-size:22px; font-weight:normal}
+.park06_content h2 i{ display:block; width:36px; height:36px;  position:absolute; left:0px; top:6px; line-height:36px; text-align:center ; font-size:18px; background:url(/images/artical05.png); font-style:normal; color:#FFF}
+.park06_content hgroup{ margin-top:30px;}
+
+.park06_station01{ margin-left:520px;}
+.park06_station02{margin-left:580px;}
+.park06_station03{ margin-left:620px;}
+.park06_station04{margin-left:630px;}

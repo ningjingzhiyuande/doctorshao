@@ -77,7 +77,7 @@ namespace :deploy do
   # after :finishing, 'deploy:cleanup'
    #before :finished ,'deploy:generate_kindeditor' 
   # before :finished ,'deploy:generate_kindeditor' 
-  # before :finished,'deploy:restart'
+   before :finished,'deploy:restart'
   # after :finished,'deploy:link_sitemap'
   # after :finished,'deploy:link_html'
 

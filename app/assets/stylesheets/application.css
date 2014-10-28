@@ -10,5 +10,7 @@
  *
  *= require public
  *= require index
+ * require about01
+ * require about02
  * require_tree .
  */
