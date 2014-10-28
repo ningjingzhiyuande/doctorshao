@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022084354) do
+ActiveRecord::Schema.define(version: 20141023081540) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.integer  "view_count"
+    t.string   "image"
+    t.integer  "status_id"
+    t.string   "kind"
+    t.boolean  "is_recommend"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "articles", ["kind"], name: "index_articles_on_kind", using: :btree
+  add_index "articles", ["status_id"], name: "index_articles_on_status_id", using: :btree
 
   create_table "contents", force: true do |t|
     t.string   "item_id"
@@ -50,6 +64,7 @@ ActiveRecord::Schema.define(version: 20141022084354) do
     t.string   "short_title"
     t.text     "info"
     t.boolean  "is_special",  default: false
+    t.integer  "parent_id"
     t.string   "image"
     t.integer  "position"
     t.datetime "created_at"

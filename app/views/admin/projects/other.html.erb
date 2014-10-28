@@ -1,0 +1,91 @@
+<%=render "shared/admin_setting_left"%>
+<style type="text/css">
+.hastable tr td.red{color:red;font-size 14px;font-weight: bold;}
+</style>
+<div id="main-wrapper">
+	<div id="main-content">
+		<%=render "shared/notice"%>
+        <div class="title">
+		<h3>后台-其他项目管理</h3>
+			
+			
+		</div>
+
+
+        <div class="hastable">
+					
+						<table> 
+						<thead> 
+						<tr>
+							<th width=5%>#ID</th>
+							<th width=15%>项目名称</th>
+					
+						    <th>内容</th> 			    
+						    <th width=25%>操作</th> 
+							
+						</tr> 
+						</thead> 
+						<tbody> 
+						<% @projects.each do |project| %>
+						<tr>
+							<td class="center red"><%=project.id%></td> 
+							<td class="red"><%=project.name%></td> 
+				
+						    <td><%= project.content.try(:body) %></td> 
+	
+						    <td>
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/edit">修改
+								</a> 
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip look_more" data-id=<%=project.id%> title="Edit this example" href="#">查看子项目
+								</a> 
+
+								<%= link_to '删除', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+							</td>			
+						</tr> 
+						<%project.children.each do |p|%>
+						    <tr class="hide project_<%=project.id%>">
+							<td class="center"><%=p.id%></td> 
+							<td><span class="red"><%=project.name%></span>---<%=p.name%></td> 
+				
+						    <td><%= p.content.try(:body) %></td> 
+	
+						    <td>
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=p.id%>/edit">修改
+								</a> 
+								
+
+								<%= link_to '删除', admin_project_path(p), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+							</td>			
+						</tr> 
+						<%end%>
+					   <%end%>			
+						</tbody>
+						</table>
+						<%#=paginate @users%>
+
+
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+</div>
+
+<script>
+$(function() {
+$(".hide").hide();
+$(".look_more").click(function(){
+     var data_id = $(this).attr("data-id");
+     $(".hide").hide("slow");     
+    $(".project_"+data_id).first().show( "slow", function showNext() {
+    $( this ).next(".project_"+data_id ).show("slow", showNext );
+  });
+
+})
+})
+</script>
+
+
+
+
+

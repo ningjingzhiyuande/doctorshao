@@ -1,0 +1,57 @@
+<%=render "shared/admin_setting_left"%>
+<div id="main-wrapper">
+	<div id="main-content">
+		<%=render "shared/notice"%>
+        <div class="title">
+		<h3>后台-文章管理<span style="padding-left:700px"><a href="/admin/articles/<%=params[:kind]%>/new/">+ 添加</a></span></h3>
+			
+			
+		</div>
+
+
+        <div class="hastable">
+					
+						<table> 
+						<thead> 
+						<tr>
+							<th>#ID</th>
+							<th>标题</th>
+							<th>内容</th>
+									    
+						    <th>操作</th> 
+							
+						</tr> 
+						</thead> 
+						<tbody> 
+						<% @articles.each do |article| %>
+						<tr>
+							<td class="center"><%=article.id%></td> 
+							<td><%=article.name%></td> 
+						  
+						    <td><%= article.content.try(:body) %></td> 
+	
+						    <td>
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/articles/<%=article.id%>/edit">修改
+								</a> 
+								<%= link_to '删除', admin_article_path(article), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+						
+							</td>
+					
+						</tr> 
+					   <%end%>			
+						</tbody>
+						</table>
+						<%#=paginate @users%>
+
+
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+</div>
+
+
+
+
+

@@ -52,9 +52,9 @@ gem 'jquery-ui-rails'
 gem 'capistrano' #, group: :development
 
 
- gem 'capistrano-rbenv'
+gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
- gem 'capistrano-rails'
+gem 'capistrano-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

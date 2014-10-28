@@ -1,7 +1,11 @@
 class Admin::ProjectsController < Admin::ApplicationController
   before_action :set_admin_project, only: [:show, :edit, :update, :destroy]
   def index
-  	@projects = Project.all
+  	@projects = Project.special_projects
+  end
+
+  def other
+  	@projects = Project.other_projects
   end
 
   def create

@@ -1,14 +1,28 @@
 Doctorshao::Application.routes.draw do
 
+
   get "admin"=>"admin/home#images"
   resources :projects
   resources :pages
 
   root "home#index"
+  get "about_shao"=> "home#about_shao"
+  get "about_hao" => "home#about_hao"
+
+  Article::KIND.each do |k,v|
+     get "admin/articles/#{k}"=>"admin/articles#index",kind: k   
+     get "admin/articles/#{k}/new"=>"admin/articles#new",kind: k        
+  end
 
   namespace :admin do 
+
+  	 resources :articles
   	 resources :pages
-  	 resources :projects
+  	 resources :projects do
+        collection do
+           get :other
+        end
+  	 end
      resources :home do
       collection do 
        get :images
