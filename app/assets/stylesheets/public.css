@@ -41,6 +41,10 @@ img{ border:0;}
 .in_nav ul li a{ color:#FFF; font-size:16px; font-weight:bold}
 .in_nav ul li a:hover{ text-decoration:underline; color:#f2c013}
 
+.nav_havedown{ position:relative;_z-index:100000}
+.nav_down_box{ display:none; position:absolute; left:0px; top:40px; z-index:10000000; min-width:96px;_width:100px; width:auto; background:#5a0152; padding:0px 10px 5px 25px; border-left:#5a0152 solid 1px}
+.nav_down_box a{ display:block;  min-width:96px; _width:100px;white-space:nowrap; width:auto; height:42px; text-align:left; line-height:42px; font-size:14px!important; }
+
 /*****banner**********/
 .banner{ width:100%;max-height: 420px;_height:420px; overflow:hidden; position:relative; position:relative;}
 #banscrollul li{ width:100%; max-height:420px; _height:420px;  background-position:center; background-size:cover;}
@@ -57,6 +61,7 @@ img{ border:0;}
 .tsxm ul li{ float:left; padding:10px 15px; background:url(/images/bk19.gif) no-repeat center right }
 .tsxm ul li a{ color:#FFF; font-size:14px; line-height:30px; font-weight:400}
 .tsxm ul li a.tsxm_cur{ color:#f2c013}
+.tsxm ul li .tsxm_zj{ display:block; width:188px;}
 
 /************底部样式******************/
 .foot_nav{ background:#292929; height:280px;} 
@@ -74,10 +79,11 @@ img{ border:0;}
 .foot_logo{ width:405px; height:80px; border-right:#262626 solid 1px; margin-top:20px; padding-top:10px; float:left}
 .foot_logo a{ display:block; background:url(/images/foot_logo.png); width:371px; height:75px;}
 .foot_logo a:hover{ background:url(/images/foot_logo_2.png)}
-.foot_mes_right{ width:580px; overflow: hidden; float:left}
+.foot_mes_right{ width:560px; overflow: hidden; float:left}
 .foot_mes_nav{ width: 100%; height: 20px; overflow:hidden;  margin:30px 0px 0px 40px; }
-.foot_mes_nav ul li{ float:left; border-left:#444 solid 1px; height:16px; line-height:16px; }
-.foot_mes_nav ul li a{ color:#444; font-size:12px; padding:0px 8px; }
+.foot_mes_nav ul li{ float:left; border-left:#444 solid 1px; height:12px; line-height:12px; }
+.foot_mes_nav ul li:first-of-type{ border:none}
+.foot_mes_nav ul li a{ color:#444; font-size:12px; line-height:14px; padding:0px 8px; }
 .foot_mes_nav ul li a:hover{ color:#fff; text-decoration:underline}
 .foot_mes_lxwm address{ font-size:12px; color:#444; font-style:normal}
 .foot_mes_lxwm{ width: 78%; margin-left:50px;font-size:12px; color:#444; line-height:22px;}
@@ -95,11 +101,12 @@ img{ border:0;}
 /************左侧*******************/
 .nr_aside{ float:left; overflow:hidden; width:230px; }
 .nr_leftxm_list{ width:220px; overflow:hidden; margin:auto}
-.nr_leftxm_list ul li h3{ font-size:14px; font-weight:normal;  text-align:center; height:34px; line-height:34px; border-bottom:#d5d5d5  solid 1px; }
-.nr_leftxm_list ul li h3 { color:#444; cursor:pointer}
+.nr_leftxm_list ul li h3{ font-size:14px; color:#fff;   text-align:center; height:42px; line-height:42px; background:url(/images/bk59.png) no-repeat center; margin:5px 0px;
+ }
+.nr_leftxm_list ul li h3 { color:#fff; cursor:pointer}
 .nr_leftxm_list ul li hgroup{ margin:10px 0px;}
-.nr_leftxm_list ul li h3.xm_h3_click{ background:#6b528b; color:#fff}
-.nr_leftxm_list ul li h4{ font-size:12px; text-align:center; height:32px; font-weight:normal; line-height:32px; border-bottom:#8a8a8a dotted 1px}
+.nr_leftxm_list ul li h3.xm_h3_click{  background:url(/images/bk59.png) no-repeat center; color:#fff}
+.nr_leftxm_list ul li h4{ font-size:12px; text-align:center; height:30px; font-weight:normal; line-height:30px; border:#d5d5d5 solid 1px; margin-top:2px; background:url(/images/bk60.png) no-repeat center right}
 .nr_leftxm_list ul li h4 a{ color:#68208d;}
 .nr_leftxm_list ul li h4 a:hover{ color:#a50cd7}
 .nr_leftxm_list ul li hgroup{ display:none}
@@ -215,3 +222,7 @@ img{ border:0;}
 .xm_right_rmwz ul li a:hover{color:#782076; text-decoration:underline}
 
 
+
+/*************************/
+
+.artical_span{ display:block; position:absolute}

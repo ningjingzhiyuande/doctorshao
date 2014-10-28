@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+  	@special_projects = Project.special_projects
   end
 
   def  about_shao

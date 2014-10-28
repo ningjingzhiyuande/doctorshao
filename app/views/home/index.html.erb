@@ -24,8 +24,22 @@
     <div class="width1000">
       <ul>
         <li><a href="#">首页</a></li>
-        <li><a href="#">关于我们</a></li>
-        <li><a href="#">特色项目</a></li>
+        <li class="nav_havedown"><a href="/about_shao">关于我们</a>
+          <div class="nav_down_box">
+          <a href="/about_shao">邵大山主任</a>
+          <a href="/about_hao">郝主任</a>
+        
+          </div>
+        </li>
+   
+
+        <li class="nav_havedown"><a href="">特色项目</a>
+            <div class="nav_down_box">
+            	<%@special_projects.each do |project|%>
+               <%=link_to project.name,project%>
+               <%end unless @special_projects.blank? %>
+            </div>
+        </li>
         <li><a href="#">其他项目</a></li>
         <li><a href="#">定制美丽</a></li>
         <li><a href="#">学术交流</a></li>
@@ -54,6 +68,16 @@
 </div>
 <div class="tsxm">
   <ul>
+  	<% (0..@special_projects.length - 2).step(2) do |i|%>
+         <li>
+      <h3> <%=link_to @special_projects[i].name,@special_projects[i], class: (i==0 ?  "tsxm_cur" : "") %></h3>
+      <h3> <%=link_to @special_projects[i+1].name,@special_projects[i+1]%></h3>
+    </li>     
+    <%end unless @special_projects.blank? %>
+     <li style="background:none">
+      <h3 class="tsxm_zj"> <%=link_to @special_projects.last.try(:name),@special_projects.last%></h3>
+    </li>
+<!--
     <li>
       <h3><a href="#"  class="tsxm_cur" >邵氏无痕开眼角</a></h3>
       <h3><a href="#">邵氏无痕重脸术</a></h3>
@@ -73,7 +97,7 @@
     <li style=" background:none">
       <h3><a href="#"  >郝主任：面部微整形、生物焊<br>
         接重睑术、抗衰老 形象设计</a></h3>
-    </li>
+    </li>-->
   </ul>
 </div>
 <div class="in_nr">
@@ -160,54 +184,19 @@
     </header>
     <div class="in_tsxmlist">
       <ul>
+      	<%@special_projects[0..7].each_with_index do |project,i|%>
+
         <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">01</div>
+          <div class="imgbox"><a href="#"><%=image_tag project.image_url, width: "150", height: "102" %>
+          	</div>
+          <div class="numberbox">0<%=i+1%></div>
           <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
+            <h2><%=link_to project.try(:name),project%></h2>
+            <p><%=project.info%></p>
           </div>
         </li>
-        <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">02</div>
-          <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
-          </div>
-        </li>
-        <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">03</div>
-          <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
-          </div>
-        </li>
-        <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">04</div>
-          <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
-          </div>
-        </li>
-        <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">05</div>
-          <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
-          </div>
-        </li>
-        <li>
-          <div class="imgbox"><a href="#"><img src="images/img04.gif"  width="150" height="102" alt=""></a></div>
-          <div class="numberbox">06</div>
-          <div class="desbox">
-            <h2><a href="#">自体脂肪隆胸</a></h2>
-            <p>自体脂肪隆胸签约承诺自一次至少增大一个罩杯，安全自然，效果永久，微创无痕！20余年隆胸经验，创隆胸技术传承与创新巅峰！</p>
-          </div>
-        </li>
+        <%end%>
+       
       </ul>
     </div>
   </section>
@@ -424,12 +413,20 @@ $(document).ready(function(e) {
                 type: 0,
                 isAutomatic: 0,
                 BnanerGeshu: 1
-               
-				
             }, "#zjul")	
-
-	
-	
+			
+			//导航下拉
+			$(".in_nav ul li.nav_havedown").hover(function(){
+			   $(this).find(".nav_down_box").stop(true)
+				$(this).find(".nav_down_box").slideDown(500);
+				
+				},function(){
+				   
+					$(this).find(".nav_down_box").slideUp(500)
+					
+					})
+			
+			
 });
 
 </script>

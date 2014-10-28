@@ -64,7 +64,7 @@
 .in_tsxmlist .desbox h2 a{ font-size:14px; color:#6e2c90;  }
 
 .in_tsxmlist .desbox p{ font-size:12px; line-height:20px; font-family:"宋体"; color:#747474}
-
+.in_tsxmlist ul li img:hover{ border:#fff solid 1px; opacity:0.9}	
 /*********************/
 .cgal{ width:680px; float:left; overflow:hidden  }
 .cgal header{ height:42px; border-bottom:#dadada solid 1px;  margin-bottom:20px; position:relative; }
@@ -89,6 +89,7 @@
 	-khtml-opacity: 0.7;
 	opacity: 0.7;}
 	
+.in_cgallist ul li img:hover{ border:#fff solid 1px; opacity:0.9}	
 .cgal_right{ float:left; margin-left:10px; display:inline; background:url(/images/bk11.gif) repeat-y; width:295px; height:525px;}	
 .in_video_bk{ background:url(/images/img08.gif); width:274px; height:188px; margin:auto; overflow:hidden}
 .in_video{ width:255px; height:180px;  margin:8px 0px 0px 10px; overflow:hidden}
