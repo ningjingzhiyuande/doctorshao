@@ -24,18 +24,14 @@
 
 <div class="banner">
   <ul id="banscrollul">
-    <li > <a href="#" title="焦点图1"> <img  src="images/banner1.jpg"  width="100%" alt=""> </a> </li>
-    <li > <a href="#" title="焦点图1"> <img  src="images/banner2.jpg"  width="100%" alt=""></a> </li>
-    <li  > <a href="#" title="焦点图1"> <img  src="images/banner3.jpg"  width="100%" alt=""></a> </li>
-    <li> <a href="#" title="焦点图1"> <img  src="images/banner4.jpg"  width="100%" alt=""></a> </li>
-    <li> <a href="#" title="焦点图1"> <img  src="images/banner5.jpg"  width="100%" alt=""></a> </li>
+   
+    <li> <a href="#" title="焦点图1"> <img  src="/images/banner5.jpg"  width="100%" alt=""></a> </li>
+    <li> <a href="#" title="焦点图1"> <img  src="/images/banner5.jpg"  width="100%" alt=""></a> </li>
   </ul>
   <ul  id="ban_btn">
     <li class="ban_btn_cur"> 1</li>
     <li > 2</li>
-    <li > 3</li>
-    <li > 4</li>
-    <li > 5</li>
+ 
   </ul>
 </div>
 
@@ -47,5 +43,61 @@
 
 </body>
 </html>
-
-
+  <script>
+$(document).ready(function(e) {
+	$(".nr_leftxm_list").find("h3").click(function(){
+       $(".nr_leftxm_list").find("h3").not(this).removeClass("xm_h3_click")
+		$(this).addClass("xm_h3_click")
+		var i=$(this).index(".nr_leftxm_list ul li h3");
+		var a=$(".nr_leftxm_list hgroup:visible").index(".nr_leftxm_list hgroup")
+		if(i==a){}
+		else{
+		$(".nr_leftxm_list ul li").find("hgroup").slideUp()
+		$(this).parent().find("hgroup").slideDown()
+		}
+		})
+	
+	$(".in_zxyy a").hover(function(){
+		
+		$(this).addClass("in_zxyycur");
+		$(".in_zxyy a").not(this).removeClass("in_zxyycur");
+		})
+	
+//banner焦点图处理
+	 $.fn.scrollfn({
+                OverTime: 500,  //效果的缓冲时间
+                Btnul: "#ban_btn",
+                BannerBtnclass: "ban_btn_cur",
+                type: 1,
+                isAutomatic: 1
+            },"#banscrollul")
+	//选项卡处理		
+	 $.fn.scrollfn({
+                
+                Btnul: "#nr_dyp_navul",
+                BannerBtnclass: "nr_dyp_navli_cur",
+                type: 2,
+				ImgBoxChild:"div" 
+            }, "#nr_dyp_box");		
+			//热门专题切换处理
+	 $.fn.scrollfn({
+                OverTime: 500,  //效果的缓冲时间
+				Titleul:"#nr_leftrmzt_tit", 
+                Btnul: "#nr_leftrmzt_btn",
+                BannerBtnclass: "nr_leftrmzt_cur",
+                type: 0,
+                isAutomatic: 1
+            }, "#nr_leftrmzt_ul");
+			//案例对比滚动		
+	 $.fn.scrollfn({
+                OverTime: 500,  //效果的缓冲时间 
+				leftbtn:".aldb_left",         //左右切换按钮的类名设置
+		     	rightbtn:".aldb_right",
+                type: 0,
+                isAutomatic: 1,
+        
+                deomShownum:2
+            }, "#aldb_ul")				
+			
+})
+</script>

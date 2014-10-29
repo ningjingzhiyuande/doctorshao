@@ -1,0 +1,137 @@
+ <aside  class="nr_aside">
+    <div class="nr_leftxm_list">
+      <h2><img src="/images/h1_qtxm.png" alt="其他美容项目"></h2>
+      <div class="blank20"></div>
+      <ul>
+      	<%@other_projects.each do |project|%>
+        <li>
+          <h3 class="<%=params[:id].to_i==project.id ? 'xm_h3_click' : ''%>"><%=project.name%><%#=link_to project.name,other_project_path(project)%></h3>
+          <hgroup style="<%=params[:id].to_i==project.id ? 'display:block' : ''%>">
+            <%project.children.each do |c|%>
+            <h4><%=link_to c.name,other_project_path(c)%></h4>
+            <%end%>
+           
+          
+          </hgroup>
+        </li>
+        <%end%>
+       <!-- <li>
+          <h3>鼻部整形</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+              <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+              <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>
+        <li>
+          <h3>面部整形</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>
+        <li>
+          <h3>胸部整形</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>
+        <li>
+          <h3>吸脂整形</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>
+        <li>
+          <h3>脂肪转移</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>
+        <li>
+          <h3>注射整形</h3>
+          <hgroup>
+            <h4><a href="#">双眼皮</a></h4>
+            <h4><a href="#">内眼角</a></h4>
+            <h4><a href="#">外眼角</a></h4>
+            <h4><a href="#">去眼袋</a></h4>
+            <h4><a href="#">提眉</a></h4>
+            <h4><a href="#">眼底娇媚术</a></h4>
+          </hgroup>
+        </li>-->
+      </ul>
+    </div>
+    <div class="nr_leftrmzt">
+      <h2><a href="#">热门专题 <span>topic</span></a></h2>
+      <ul id="nr_leftrmzt_btn">
+        <li class="nr_leftrmzt_cur">1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <div class="nr_leftrmzt_box">
+        <ul id="nr_leftrmzt_ul">
+          <li><a href="#"><img src="/images/img11.png" width="230" height="128" alt=""></a></li>
+          <li><a href="#"><img src="/images/img11.png" width="230" height="128" alt=""></a></li>
+          <li><a href="#"><img src="/images/img11.png" width="230" height="128" alt=""></a></li>
+        </ul>
+        <ul id="nr_leftrmzt_tit">
+          <li><a  href="#">美容美容美容美容1</a></li>
+          <li><a  href="#">美容美容美容美容2</a></li>
+          <li><a  href="#">美容美容美容美容3</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nr_leftrmwz">
+      <h2><a href="#">热门文章 <span>Artic</span></a></h2>
+      <span class="nr_leftrmwz_more"> <a href="#" class="tr1s">+</a></span>
+      <ul>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
+      </ul>
+    </div>
+    <div class="nr_leftlxwm">
+      <hgroup>
+        <h3 class="in_zxrx"> 400-000-0000<br>
+          <span>24小时免费咨询热线</span> </h3>
+        <h3 class="in_mztime"> 9:00 -- 19:30<br>
+          <span>门诊时间（全年无休）</span> </h3>
+      </hgroup>
+      <div class="in_zxyy"> <a href="#" class="tr1s in_zxyycur">在线咨询</a> <a href="#" class="tr1s">免费预约</a> </div>
+    </div>
+  </aside>
+
+

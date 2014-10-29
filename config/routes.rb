@@ -2,6 +2,7 @@ Doctorshao::Application.routes.draw do
 
 
 
+
   get "admin"=>"admin/home#images"
 
   get "dingzhi" => "projects#dingzhi"
@@ -10,6 +11,7 @@ Doctorshao::Application.routes.draw do
   get "contact_us" => "home#contact_us"
   resources :projects,:only=>[:show,:index]
   resources :pages
+  resources "facials" ,as: "other_project"
 
   root "home#index"
   get "about_shao"=> "home#about_shao"
