@@ -3,4 +3,7 @@ class ProjectsController < ApplicationController
   def show
   	#binding.pry
   end
+
+  def dingzhi
+  end
 end

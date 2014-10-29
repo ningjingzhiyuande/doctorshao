@@ -1,38 +1,4 @@
-
-<div class="tsxm">
-  <ul>
-  	<% (0..@special_projects.length - 2).step(2) do |i|%>
-         <li>
-      <h3> <%=link_to @special_projects[i].name,@special_projects[i], class: (i==0 ?  "tsxm_cur" : "") %></h3>
-      <h3> <%=link_to @special_projects[i+1].name,@special_projects[i+1]%></h3>
-    </li>     
-    <%end unless @special_projects.blank? %>
-     <li style="background:none">
-      <h3 class="tsxm_zj"> <%=link_to @special_projects.last.try(:name),@special_projects.last%></h3>
-    </li>
-<!--
-    <li>
-      <h3><a href="#"  class="tsxm_cur" >邵氏无痕开眼角</a></h3>
-      <h3><a href="#">邵氏无痕重脸术</a></h3>
-    </li>
-    <li>
-      <h3><a href="#"  >邵氏无痕三层收紧眼袋去除术</a></h3>
-      <h3><a href="#">邵氏鼻综合整形术</a></h3>
-    </li>
-    <li>
-      <h3><a href="#"  >邵氏微创面部提升术</a></h3>
-      <h3><a href="#">邵氏自体脂肪移植术</a></h3>
-    </li>
-    <li>
-      <h3><a href="#"  >邵氏多维形体雕塑术</a></h3>
-      <h3><a href="#">邵氏微创双平面隆胸术</a></h3>
-    </li>
-    <li style=" background:none">
-      <h3><a href="#"  >郝主任：面部微整形、生物焊<br>
-        接重睑术、抗衰老 形象设计</a></h3>
-    </li>-->
-  </ul>
-</div>
+<%=render "/home/special_project"%>
 <div class="in_nr">
   <div class="blank30"></div>
   <div class="park1 width1000">
