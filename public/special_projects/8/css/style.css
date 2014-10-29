@@ -1,0 +1,15 @@
+.this_wrap{ width: 1000px; margin: 0 auto;}
+.bodybk{ background: #f2e0dc;}
+.section_box{ border-top: #222222  solid 1px; background:#fff5f3 url(../images/bottom_bk.png)  no-repeat center bottom;} 
+
+.park01_left{ width:300px;  text-align: center; float:left;}
+.park01_right{ width: 600px; padding: 0px 50px; float: left; background: url(../images/icon_01.png) no-repeat center left;}
+.park01_right p{ text-indent: 28px; line-height: 28px; font-size: 14px; color: #303030;}
+.park01_right ul li{ height: 45px; line-height: 45px; font-size: 14px;}
+.park01_right ul li i{ display: block; width: 24px; height: 24px; float: left; margin-top: 10px; margin-right: 20px; display: inline;
+ background: #955d50; border-radius: 12px; text-align: center; line-height: 24px; font-style: normal; color: #FFFFFF;
+}
+
+.park02 ul li{ width: 236px; overflow: hidden; float: left; margin:10px 7px; display: inline;}
+.park02 ul li h2 { width: 100%; height: 38px; line-height: 38px; font-size: 18px; font-weight: normal; color: ; text-align: center; background: #dfa763;}
+.park02 ul li h2 a{ color: #111111;}

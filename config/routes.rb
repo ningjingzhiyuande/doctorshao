@@ -1,6 +1,7 @@
 Doctorshao::Application.routes.draw do
 
 
+
   get "admin"=>"admin/home#images"
   resources :projects
   resources :pages

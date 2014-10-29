@@ -1,0 +1,35 @@
+
+.width1000{ width: 1000px; margin:0 auto; }
+.park01{ border: #ececec solid 1px;border-radius: 8px ;}
+
+section header{ margin-top: 10px;}
+
+.park01_1_left{ width: 520px; float: left; padding: 0px 20px;}
+.park01_1_left p{ font-size: 14px; line-height: 24px; color: #666666; text-indent: 28px;}
+.park01_1_left a.more{ display: block; width: 200px; padding-right: 10px; text-align: right; background: #c70081; height: 28px; line-height: 28px;color: #FFFFFF; margin-left: 250px;;}
+.park01_1_right{ float: left; width: 410px;;}
+.park01_1_right img{ display:block; margin:0px 2px; float:left; display:inline}
+.park01 ul li{ width: 296px; height: 180px; padding: 5px; border: #D2D2D2 solid 1px; float: left; margin: 10px;;}
+.park01_sq{ position:relative; float:left; width:146px; height:180px;}
+.park01_sh{ position:relative; float:left;width:146px; height:180px; margin-left:4px; display:inline}
+.park01 ul li  h2{  position:absolute; bottom:0px; height:36px; text-align:center; line-height:36px; width:146px; background:url(../images/bk02.png); font-size:16px; color:#f47497 ;}
+
+
+.zxzx{ width: 228px; height: 42px; display: block; margin: 0 auto;}
+
+.park02{border: #ececec solid 1px;border-radius: 8px ;} 
+
+.park02 ul{ margin: 0px 24px;}
+.park02 ul li{ float: left; width:238px; height:340px;}
+.park02 ul li p{ width:80%; padding:0px 10%; height:88px; line-height:20px; font-size:14px; margin-top:80px;}
+.park02 ul li img{ margin-left:24px; box-shadow:1px 1px 2p #000;
+transform:rotate(-2deg);transform-origin:0% 0%;
+ -webkit-transform:rotate(-2deg);-webkit-transform-origin:0% 0%;
+  -moz-transform:rotate(-2deg);-moz-transform-origin:0% 0%;
+   -o-transform:rotate(-2deg);-o-transform-origin:0% 0%;
+}
+.park02_01{ background:url(../images/bk07.png)}
+.park02_02{background:url(../images/bk08.png)}
+.park02_03{background:url(../images/bk09.png)}
+.park02_04{background:url(../images/bk10.png)}
+.park03{ border: #ececec solid 1px;border-radius: 8px ;}

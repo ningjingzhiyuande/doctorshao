@@ -1,0 +1,33 @@
+.auto1000{  width: 1000px; margin:auto ;}
+
+
+.park01_left{ width: 630px; padding: 0px 10px; float: left; position: relative;}
+.park01_left p{ font-size: 14px; line-height: 26px; color: #666666;}
+.park01_left .park01_zzxz{ display: block; width: 115px; height: 36px; line-height: 36px; color: #FFFFFF; font-size: 16px; padding-left: 20px;
+ background:#842582 url(../images/icon01.png) no-repeat center right; position: absolute; right:20px; bottom: 0px; border-radius: 6px; }
+
+
+.park01_right{ float: left; margin-left: 60px; display: inline; padding: 6px; border: #e1e1e1 solid 1px; box-shadow: 0px 0px 3px #e1e1e1 inset;}  
+.park01_right img{ display: block;}
+
+
+.park02{ background: #e1e1e1;}
+.park02 ul li{ width: 302px; padding: 5px; overflow: hidden;  background: #FFFFFF; float: left; margin: 20px 10px; display: inline;}
+.park02_img{ width:302px; height:126px; overflow:hidden; background:url(../images/bkjiantou.png) no-repeat center}
+.park02_img .before{ position:relative; float:left}
+.park02_img .after{position:relative; float:left; margin-left:28px; display:inline}
+.park02_img span{ position:absolute; left:5px; bottom:5px; font-size:14px; color:#333}
+
+.park02 ul li img{ display: block;}
+.park02 ul li h2{ font-size: 12px; line-height: 26px; font-weight: normal; text-align: center; padding-top: 5px;}
+.park02 ul li h2 a{ color: #666666;}
+
+
+
+.park03 ul li{ width: 296px; float: left; margin: 0px 14px; display: inline;} 
+.park03 ul li img{ display: block; border: #e9e9e9 solid 3px;}
+.park03 ul li h2{ font-size: 14px; font-weight: normal; height: 60px; line-height: 60px;}
+.park03 ul li h2 i{ font-weight: bold; font-style: normal; padding-right: 10px;}
+
+
+.park04{ background: #E1E1E1;}

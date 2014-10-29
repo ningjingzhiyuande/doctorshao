@@ -1,0 +1,32 @@
+.bodybk{ background: url(../images/bkbody.png);}
+
+.this_wrap{ width: 1000px; margin:0 auto;}
+.park01_left{ width: 344px; float: left;}
+.park01_right{ width: 636px; margin-left: 20px; float: left;}
+.park01_right p{ font-size: 14px; line-height: 23px; color: #666666; text-indent: 28px;}
+
+
+.park02_left{ width: 651; margin-left: 5px; display: inline; float: left;}
+
+.park02_left ul li{ width: 651px; height: 53px; line-height: 52px; font-size: 14px; background: url(../images/bk01.png);}
+.park02_left ul li span{ padding: 0px 15px; margin-right: 20px; font-family: impact; font-size: 20px; color: #FFFFFF;}
+
+.park02_right{ position: relative; width: 256px; height: 256px; padding: 5px; border: #d6d6d6 solid 1px; overflow: hidden; float: left; margin-left: 50px;}
+
+#park02_scroll{ width: 2000px; position: absolute; left: 0px; top: 0px;}
+#park02_scroll li{ float: left; margin: 5px; display: inline;}
+#park02_btn { width: 90px; position: absolute; bottom: 20px; right: 10px;}
+#park02_btn li{ float: left; margin:0px 5px; display: inline; width:20px; height: 10px; font-size: 0px; color: #FFFFFF; background: #FFFFFF; cursor: pointer;}
+#park02_btn li.cur{ background: #40183b; color: #40183b;}
+
+
+.park03_box{ overflow: hidden; background: #dcdadb url(../images/park_bottom_bk.png) no-repeat center bottom; width: 978px; height: 400px; margin: 0 auto; position: relative;}
+
+.park03_scroll_box{ width:868px ; height: 338px; margin: 20px auto; background:url(../images/bk02.png); overflow: hidden; position: relative;}
+.park03_scroll_box ul li{ float: left; margin: 25px 40px; display: inline;}
+.park03_scroll_box ul li figure{ float:left; margin:5px; display:inline}
+.park03_scroll_box ul li figure figcaption{ text-align:center}
+.park03_scroll_box ul { position: absolute; left: 0px; width: 5000px;}
+
+.left_btn{ position: absolute; top: 40%; left: 0px;}
+.right_btn{position: absolute; top: 40%; right: 0px;}

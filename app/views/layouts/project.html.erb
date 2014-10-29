@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>邵大山整容中心</title>
+   <%= stylesheet_link_tag   "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag    "/special_projects/pubicstyle/style"%>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lte IE 8]>
+  <%= javascript_include_tag "html5", "data-turbolinks-track" => true %>
+
+<![endif]-->
+<!--[if IE 6]>
+	  <%= javascript_include_tag "IE6PNG", "data-turbolinks-track" => true %>
+
+    <script>
+    	DD_belatedPNG.fix(".in_head_tel img,.in_head_logo img,.foot_logo a");
+    </script>
+<![endif]-->
+</head>
+
+<body class="inbody">
+
+		<!--header start-->
+
+	<%=render "layouts/header"%>
+
+
+<%= yield %>
+
+
+	<%=render "layouts/footer"%>
+</body>
+</html>
+
+

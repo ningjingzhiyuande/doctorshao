@@ -1,0 +1,108 @@
+
+/*****banner**********/
+.banner{ width: 100%; overflow: hidden; max-height: 448px;_height:448px;}
+
+/*daodu*/
+.daodu{ background:url(../images/bk_01.png); width: 1020px; height: 109px; overflow: hidden;}
+.daodu p{ font-size:12px ; color: #666666; line-height: 24px; margin:20px 0px 0px 200px;}
+
+
+/*park01*/
+.park01 { background:url(../images/bk04.png) no-repeat center bottom; overflow: hidden;}
+.park01 header,.park03 header,.park04 header{ width: 100%; height: 34px; position: relative; }
+.park01 header .zxzx,.park03 header .zxzx,.park04 header .zxzx{ position: absolute; right: 20px; top: 10px; color: #FFFFFF; font-weight: bold; font-size: 14px; padding-left: 20px;
+   background: url(../images/icon_zxzx.png) no-repeat  center left; height: 20px; line-height: 16px; display: block; }
+.park01 header .zxzx:hover{ color:#edbdfd;}
+
+.park01_01{  float:left;width:380px ; height: 336px; overflow: hidden; background: url(../images/bk05.png) no-repeat center right; padding:0px 10px;}
+
+.park01_01 p{ font-size: 16px; line-height: 28px; color: #666666;}
+
+
+.park01_02{ float: left; width: 294px; height:336px ; background:  url(../images/bk05.png) no-repeat center right;}
+.park01_02_scroll{ width: 240px; height: 240px; overflow: hidden; margin:0 auto; position: relative;}
+.park01_02_btn_bk{ height: 30px; width: 240px; background: #FFFFFF;filter:alpha(opacity=70);-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;
+  position: absolute; bottom: 0px ; left: 0px;
+}
+#park01_02_btn{ margin-left:120px;}
+#park01_02_btn li{ display: block; width: 10px; height: 10px; float: left; margin: 10px 8px; display: inline;
+  font-size: 0px; color: #888888; background: #888888; border-radius: 5px;}
+#park01_02_btn  .park01_02_btn_cur{  background: #9e00b9; color: #9e00b9;}
+#park01_02_scrollul{ width: 2000px; position: absolute; top: 0px; left: 0px;}
+#park01_02_scrollul li{ float: left; width: 240px; height: 240px; overflow: hidden;}
+
+.park01_02_zxxm{ width: 240px;  margin: auto; padding: 10px 0px; background:url(../images/bk06.png) no-repeat center top;}
+.park01_02_zxxm h2{font-size:14px; color: #9e00b9;}
+.park01_02_zxxm ul li{ float: left; font-size: 12px; width: 60px; line-height: 24px; cursor: pointer;}
+.park01_02_zxxm ul li a{ color:#9e00b9 ;}
+
+.park01_03{ width: 320; height: 336px;; float: left;}
+.park01_03 h2{  color: #6A158C; font-size: 24px; text-align: center;}
+
+.park01_03_tab td{ text-align: center; font-size: 14px; color: #632187;}
+.park01_03_text{ width: 228px; height: 28px; border: #c4c4c4 solid 1px; box-shadow: 1px 1px 3px #C1C1C1 inset;} 
+.park01_03_textarea{ width: 228px; height: 135px; border: #C4C4C4 solid 1px;box-shadow: 1px 1px 3px #C1C1C1 inset;}
+.park01_03_sub{ border: none; width: 106px; height: 31px; background: url(../images/bk14.png); color:#FFFFFF; text-align: center;}
+/*park02*/
+.park02 header{ position: relative; width: 1020px; height: 82px;}
+.park02 #park02_btn{ position: absolute; width: 500px; top: 30px; right: 0px;}
+.park02 #park02_btn  li{ float: left;  width: 65px; text-align: center; height: 35px; font-size:14px ; line-height: 40px; cursor: pointer;}
+.park02 #park02_btn  .park02_btn_cur{ background:url(../images/bk17.png) no-repeat center bottom; color: #ab14c5;}
+
+.park02_content{ width: 1020px; height: 435px; position: relative;}
+.park02_one{ width: 1020px; position: absolute; top: 0px; left: 0px;}
+.park02_one_01 .park02_one_left{ width: 430px; float: left; padding-left: 10px;;}
+.park02_one_01 .park02_one_left h2{ font-size: 14px; font-weight: normal;}
+.park02_one_01_zxzx{ width: 260px; float: right;}
+.park02_one_01_zxzx li{ width: 106px; height: 31px; background:url(../images/bk15.png);  line-height: 31px; text-align: center; float: left; margin: 0px 5px;}
+.park02_one_01_zxzx li a{ color: #FFFFFF;}
+.park02_one_01_zxzx .park02_one_01_zxzx_cur{ background: url(../images/bk14.png);}
+.park02_one_right{ float: left; margin-left: 25px; display: inline;}
+
+/*park03*/
+.park03_content{ overflow:hidden; height: 442px; background: url(../images/bk04.png) no-repeat center bottom;}
+.park03_content_left{ float: left;  height: 400px; width: 350px; padding:20px 0px 0px 52px;overflow: hidden;  background: url(../images/bk11.png) no-repeat center right;}
+ }
+.park03_content_left img{ display: block; margin:20x auto; }
+
+.park03_content_right{ width:560px;  float: left; padding: 20px;;}
+.park03_content_right h2{ font-size:20px; font-weight: normal; color: #5f3575;}
+.park03_content_right h2  span{ padding: 0px 10px; font-size: 16px;}
+.park03_content_right p{ font-size: 12px; line-height: 24px; color: #666666;}
+.park03_content_right ul li{ width: 164px; height: 58px; float: left; line-height: 58px; background: #0e6c88; margin: 10px 20px; border-radius:10px; text-align: center ;}
+.park03_content_right ul li a{ color: #FFFFFF; font-size: 24px;;}
+.park03_content_right ul li.park03_content_right_cur{ background: #9e0a3a;}
+
+/*park04*/
+.park04{ overflow: hidden;}
+.park04_contentimg{ width: 298px; height: 168px; overflow: hidden;}
+.park04_contentimg div { float: left; display: inline; width: 144px; height: 168px; overflow: hidden; margin-left: 5px; position: relative;}
+.park04_contentimg div  span{ position: absolute; display: block; width: 60px; height: 30px; line-height: 30px; text-align: center; right: 0px; bottom: 0px; }
+.park04_contentimg div  span a{ color: #FFFFFF;}
+.beforeimg:hover span{ background:#000;filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;}
+.afterimg:hover span{ background:#000;filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;}
+.park04_content{ width: 1020px; height:403px; overflow: hidden ; position: relative;}
+#park04_contentUL{ width: 5000px; position: absolute; left: 0px; top: 0px;;}
+#park04_contentUL li{ width: 298px; overflow: hidden; margin: 0px 20px; float: left; display: inline;}
+.park04_contentp{ width: 280px; padding: 10px; height: 215px; background: url(../images/bk13.png)  no-repeat  center right;
+ line-height: 28px; font-size: 12px;  color: #666666; overflow: hidden;
+}
+
+.park04_btnbox{ width: 100%; height: 60px; position: relative;}
+#park04_btnul{ position: absolute; top: 30px; right: 80px; width: 80px; }
+#park04_btnul li{ width: 10px; height: 10px; font-size: 0px; color: #E2E2E2;  float: left; margin: 0px 6px;  background: #e2e2e2 ;  border-radius:5px; ;}
+#park04_btnul li.park04_btn_cur{ background: #41114D;}
+.park04_btnbox_left{ position: absolute;  top: 18px; right: 160px; display: block; width:26px; height: 30px; font-size: 30px; font-family: "宋体";}
+.park04_btnbox_right{position: absolute;  top: 18px; right: 60px; display: block; width:26px; height: 30px; font-size: 30px; font-family: "宋体";}
+
+
+
+
+
+

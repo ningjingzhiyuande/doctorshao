@@ -1,0 +1,23 @@
+
+.this_wrap{ width: 1000px; margin: 0 auto;}
+
+section header h1 img{ display: block}
+
+.section_box{ border: #dcdcdc solid 1px; width: 983px; padding: 10px 0px; overflow: hidden; margin-left: 11px; border-top: 0;}
+
+.park01_left{ width: 610px; padding:0px 20px;float: left;}
+.park01_left p{ font-size: 14px ; line-height: 24px; text-indent:30px; }
+.park01_right{ float: left; width: 288px; overflow: hidden; margin-left: 10px; display: inline; padding: 5px; border: #d5d5d5 solid 1px;} 
+.park01_right img{ display: block;}
+.park01_foot{ position:relative; width: 100%; text-align: center;}
+.park01_foot a{ position:absolute; right:30px; bottom:15px; font-size:24px; color:#e86d1d}
+
+.park02_content{ background: #fbf6f0;}
+.park02_content ul li{ position:relative; float: left; margin: 11px; width:222px; height:222px; overflow:hidden; display: inline;}
+.park02_content ul li .park02_span{ width:222px; height:222px; background:url(../images/artical01.png)}
+.park02_content ul li  h2{ position:absolute; height:36px; line-height:36px; text-align:center; width:100%; left:0px; bottom:20px; font-size:18px; color:#440041; font-weight:normal}
+.park02_content ul li a{ display:block; width:222px; height:222px; position:absolute; left:0px; top:0px;}
+.park03_left{ float: left; width: 750px;}
+.park03_left ul li{ width: 656px; padding-left: 20px; height: 52px; line-height: 52px; font-size: 14px;  border: #d5d5d5 solid 1px; margin: 10px 20px;}
+
+.park03_right{ float: left;}
