@@ -5,8 +5,8 @@
       <ul>
       	<%@other_projects.each do |project|%>
         <li>
-          <h3 class="<%=params[:id].to_i==project.id ? 'xm_h3_click' : ''%>"><%=project.name%><%#=link_to project.name,other_project_path(project)%></h3>
-          <hgroup style="<%=params[:id].to_i==project.id ? 'display:block' : ''%>">
+          <h3 class="<%=@parent_id==project.id ? 'xm_h3_click' : ''%>"><%=project.name%><%#=link_to project.name,other_project_path(project)%></h3>
+          <hgroup style="<%=@parent_id==project.id ? 'display:block' : ''%>">
             <%project.children.each do |c|%>
             <h4><%=link_to c.name,other_project_path(c)%></h4>
             <%end%>

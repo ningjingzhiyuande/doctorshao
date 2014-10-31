@@ -16,7 +16,7 @@
 		<span class="width_align_right">项目名称</span> 
        <span class="width_content">
        	<%=f.text_field :name,class: "field error project_title text large"%>
-       	<%=f.hidden_field :is_special,value: true%>
+       	<%=f.hidden_field :is_special,value: false%>
        </span>
     </li>
     <li> 
@@ -63,14 +63,14 @@ $(function() {
        	 "project[name]": "required",
        	 "project[info]": "required",
          "project[content_attributes][body]": "required",
-         "project[image]": "required"
+       //  "project[image]": "required"
 
         },
        messages:{
         "project[name]":"不能为空",
         "project[info]": "不能为空",
-         "project[content_attributes][body]": "不能为空",
-        "project[image]": "请选择图片"
+         "project[content_attributes][body]": "不能为空"
+      //  "project[image]": "请选择图片"
     }})
 
 
