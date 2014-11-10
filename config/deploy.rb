@@ -69,7 +69,7 @@ namespace :deploy do
     #after :updating, "deploy:cp_file"
     #after :publishing, "deploy:setup_config"
 
-   # before  :updated,"bundler:install"
+    before  :updated,"bundler:install"
   # only allow a deploy with passing tests to deployed
    #before :deploy, "deploy:run_tests"
   # compile assets locally then rsync
