@@ -9,8 +9,8 @@
 
 /*park01*/
 .park01 { background:url(../images/bk04.png) no-repeat center bottom; overflow: hidden;}
-.park01 header,.park03 header,.park04 header{ width: 100%; height: 34px; position: relative; }
-.park01 header .zxzx,.park03 header .zxzx,.park04 header .zxzx{ position: absolute; right: 20px; top: 10px; color: #FFFFFF; font-weight: bold; font-size: 14px; padding-left: 20px;
+.park01 div.header,.park03 div.header,.park04 div.header{ width: 100%; height: 34px; position: relative; }
+.park01 div.header .zxzx,.park03 div.header .zxzx,.park04 div.header .zxzx{ position: absolute; right: 20px; top: 10px; color: #FFFFFF; font-weight: bold; font-size: 14px; padding-left: 20px;
    background: url(../images/icon_zxzx.png) no-repeat  center left; height: 20px; line-height: 16px; display: block; }
 .park01 header .zxzx:hover{ color:#edbdfd;}
 

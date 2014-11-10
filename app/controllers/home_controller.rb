@@ -17,5 +17,7 @@ class HomeController < ApplicationController
   def about_hao
   	@page = Page.find_by_kind "about_doctorhao"
   end
-  
+  def contact_us
+  	@page = Page.find_by_kind "contact_us"
+  end
 end

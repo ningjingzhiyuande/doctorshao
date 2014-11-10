@@ -452,6 +452,94 @@ end
 	  </div>
 </div>	
 
-	}
+	},"about_us"=>%w{<div class="in_nr">
+	<div class="blank30">
+	</div>
+	<div class="width1000">
+		<div class=" lxwm_nr">
+			<div class="mbx">
+				您当前的位置：<a href="#">首页</a> &gt; <a href="#">关于我们</a> &gt; <a href="#">联系我们</a> 
+			</div>
+			<div class="blank20">
+			</div>
+			<div class="lxwm_nr_map">
+				<img src="images/img22.png" width="1000" height="300" alt="地图位置" /> 
+			</div>
+			<div class="blank30">
+			</div>
+			<div class="blank30">
+			</div>
+			<div class="lxwm_nr_zj01_img">
+				<a href="#"> <img src="images/img23.png" width="182" height="182" alt="邵大山" /> </a> 
+			</div>
+			<div class="lxwm_nr_zj01_des">
+				<h2>
+					<a href="#">邵大山</a> 
+				</h2>
+				<div class="blank30">
+				</div>
+				<div class="blank10">
+				</div>
+				<p>
+					海军总医院激光整形美容中心医学整形美容中心美容外科主任<br />
+大连医科大学整形外科专业<br />
+韩国整形美容诊所工作7年经历<br />
+原金炫澈整形美容诊所首席专家<br />
+擅长技术：各种重睑术、祛眼袋手术，"L"型眼部综合整形、"U"型眼部综合整形、"V"型眼部综合整形。
+				</p>
+			</div>
+			<div class="blank30">
+			</div>
+			<div class="lxwm_nr_zj02_des">
+				<h2>
+					<a href="#">郝主任</a> 
+				</h2>
+				<div class="blank30">
+				</div>
+				<div class="blank10">
+				</div>
+				<p>
+					海军总医院激光整形美容中心医学整形美容中心美容外科副主任<br />
+毕业于白求恩医科大学临床医学系<br />
+中华医学会整形外科分会会员<br />
+中国医师协会美容与整形医师分会会员<br />
+擅长技术：各种方法重睑术、眼周年轻化设计手术、去眼袋术、面部个性化改造
+				</p>
+			</div>
+			<div class="lxwm_nr_zj02_img">
+				<a href="#"> <img src="images/img24.png" width="182" height="182" alt="邵大山" /> </a> 
+			</div>
+			<div class="blank30">
+			</div>
+			<div class="lxwm_nr_mes">
+				<h2>
+					联系我们
+				</h2>
+				<div class="blank20">
+				</div>
+				<p>
+					电话 微博 微信 等
+                 	<!-- 地址: 天津市河西区小围堤道12号<br />
+电话：022-12345678<br />
+传真：022-12345678<br />
+邮箱：-->
+				</p>
+			</div>
+			<div class="blank30">
+			</div>
+			<div class="lxwm_nr_mes">
+				<h2>
+					驾车指引
+				</h2>
+				<div class="blank20">
+				</div>
+				<p>
+					公交线路：请乘坐47, 47区间, 48, 48区间, 503, 676, 685, 830, 857, 867, 872, 912或 机场专线5路公交车路到光华桥下车，沿湘阳大街直走右转即到<br />
+地铁线路：请乘坐地铁1号线，土城站下车，D口出，直行至十字路口右拐即到
+				</p>
+			</div>
+		</div>
+	</div>
+</div>}
 
 }

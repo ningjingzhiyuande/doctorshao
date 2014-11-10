@@ -1,12 +1,16 @@
 <%=stylesheet_link_tag "nrstyle", "data-turbolinks-track" => true %>
 <%=render "/home/special_project"%>
+<%=raw @page.content.try(:body)%>
+
+<!--
+
 
 		<div class="in_nr">
 			<div class="blank30"></div>
 			<div class="width1000">
-				<article class=" lxwm_nr">
-					<header class="mbx">您当前的位置：<a href="#">首页</a> > <a href="#">关于我们</a> > <a href="#">联系我们</a> 
-					</header>
+				<div class=" lxwm_nr">
+					<div class="mbx">您当前的位置：<a href="#">首页</a> > <a href="#">关于我们</a> > <a href="#">联系我们</a> 
+					</div>
                    <div class="blank20"></div>
                  <div class="lxwm_nr_map">
                  	<img src="images/img22.png" width="1000" height="300" alt="地图位置">
@@ -63,11 +67,11 @@
                  <h2>联系我们</h2>
                  <div class="blank20"></div>
                  <p>电话 微博 微信 等
-                 	<!--
+                 
 地址: 天津市河西区小围堤道12号<br />
 电话：022-12345678<br />
 传真：022-12345678<br />
-邮箱：-->
+邮箱：-
                  </p>
                  </div>
                    <div class="blank30"></div>
@@ -81,8 +85,11 @@
                  
                  
                  
-				</article>
-				<!--
+				</div>
+				
+			</div>
+		</div>
+
 				<aside class="nr_aside nr_aside_about">
 					<div class="nr_leftxm_list nr_leftxm_list_about">
 						<h2><img src="images/h1_about.png" alt="关于我们"></h2>
@@ -122,6 +129,3 @@
     </div>
 
 				</aside>-->
-			</div>
-		</div>
-
