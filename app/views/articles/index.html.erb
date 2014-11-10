@@ -14,7 +14,7 @@
       <div class="xm_des_right">
       	
         <h1><%=a.title%></h1>
-        <p><%=a.content.try(:body)%> </p>
+        <p><%=raw truncate(strip_tags(a.content.try(:body)),length: 400)%>  </p>
         <div  class="xm_zxyu">
         <a href="/articles/<%=a.id%>" class="tr1s">查看详细</a>
        
@@ -29,8 +29,8 @@
        <ul class="xm_list_ul">
        	<%@articles[1..9].each do |article|%>
          <li>
-           <h2><%=link_to article.title,a%></h2>
-           <p><%=article.content.try(:body)%>  <a href="/articles/<%=article.id%>">[更多内容]</a></p>
+           <h2><%=link_to article.title,article%></h2>
+           <p><%=raw truncate(strip_tags(article.content.try(:body)),length: 100)%>   <%#=article.content.try(:body)%>  <a href="/articles/<%=article.id%>">[更多内容]</a></p>
          </li>
          <%end%>
          
