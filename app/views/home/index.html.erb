@@ -23,7 +23,7 @@
       <%@zixun.each do |z|%>
       <div class="in_news_h">
         <h2><%=link_to z.title,z%></h2>
-        <p><%=z.content.body%></p>
+        <p><%=truncate(strip_tags(z.content.body),length: 200)%></p>
       </div>
       <%end unless @zixun.blank?%>
       
