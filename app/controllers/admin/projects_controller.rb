@@ -11,7 +11,7 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   def create
   	@project = Project.new(admin_project_params)  
-  	path = "/admin/projects"+@projects.is_special ? "/" : "/other"
+  	path = "/admin/projects"+(@projects.is_special ? "/" : "/other")
     respond_to do |format|
       if @project.save
         format.html { redirect_to path, notice: '创建成功' }
@@ -33,7 +33,7 @@ class Admin::ProjectsController < Admin::ApplicationController
   end
 
   def update
-  	path = "/admin/projects"+@projects.is_special ? "/" : "/other"
+     path = "/admin/projects"+(@projects.is_special ? "/" : "/other")
      respond_to do |format|
       if @project.update(admin_project_params)
         format.html { redirect_to path, notice: '修改成功' }
