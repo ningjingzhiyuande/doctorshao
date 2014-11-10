@@ -10,7 +10,7 @@
       <div class="blank10"></div>
     <h1 class="xmnyH1" ><%=@article.title%></h1>    
         <div class="blank20"></div>
-         <%=@article.content.try(:body)%>
+         <%=raw @article.content.try(:body)%>
 
      
       </div>
