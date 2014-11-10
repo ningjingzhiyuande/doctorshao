@@ -8,5 +8,6 @@ module ApplicationHelper
   	when "questions"
   		return '美容咨询'
   	end
+  	return "学术交流"
   end
 end
