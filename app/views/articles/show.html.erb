@@ -1,2 +1,23 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<%=stylesheet_link_tag "nrstyle", "data-turbolinks-track" => true %>
+<%=render "/home/special_project"%>
+<div class="in_nr">
+   <div class="blank20"></div>
+  <div class="width1000">
+   
+    <article class="xmny_left">
+      <header class="mbx"> 您当前的位置：<a href="#">首页</a> > <a href="#"><%=name_for_kind(@article.kind)%></a>  </header>
+      <div>
+      <div class="blank10"></div>
+    <h1 class="xmnyH1" ><%=@article.title%></h1>    
+        <div class="blank20"></div>
+         <%=@article.content.try(:body)%>
+
+     
+      </div>
+      
+    </article>
+    <%=render "article_left"%>
+   
+  </div>
+  <div class="blank20"></div>
+</div>

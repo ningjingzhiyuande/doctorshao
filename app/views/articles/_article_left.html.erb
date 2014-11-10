@@ -1,56 +1,11 @@
-<%=stylesheet_link_tag "nrstyle", "data-turbolinks-track" => true %>
-<%=render "/home/special_project"%>
-<div class="in_nr">
-   <div class="blank20"></div>
-  <div class="width1000">
-   
-    <article class="xmny_left">
-      <header class="mbx"> 您当前的位置：<a href="/">首页</a> > <a href="/articles">学术交流</a> </header>
-      <div class="blank20"></div>
-      <%if params[:page].blank? || params[:page]=="1"%>
-      <%a=@articles.first%>
-
-      <div class="xm_des"> <a href="/articles/<%=a.id%>"><%=image_tag a.image_url,width:"250",height: "172"%></a> 
-      <div class="xm_des_right">
-      	
-        <h1><%=a.title%></h1>
-        <p><%=raw truncate(strip_tags(a.content.try(:body)),length: 200)%>  </p>
-        <div  class="xm_zxyu">
-        <a href="/articles/<%=a.id%>" class="tr1s">查看详细</a>
-       
-        </div>
-    
-      </div>
-
-      
-      </div>
-         <%end%>
-      <div class="blank20"></div>
-       <ul class="xm_list_ul">
-       	<%@articles[1..9].each do |article|%>
-         <li>
-           <h2><%=link_to article.title,article%></h2>
-           <p><%=raw truncate(strip_tags(article.content.try(:body)),length: 60)%>   <%#=article.content.try(:body)%>  <a href="/articles/<%=article.id%>">[更多内容]</a></p>
-         </li>
-         <%end%>
-         
-        
-       </ul>
-       
-       <div class="blank20"></div>
-      <%=will_paginate @articles%>
-      
-      
-      
-    </article>
-    <aside class="xmny_aside"> 
+ <aside class="xmny_aside"> 
       <div  class="xmright_zjtj">
         <h2><a href="#">专家推荐 <span>Topic</span></a></h2>
  
       <ul id="xmright_zjtj_ul">
          <li>
           <a href="#">
-           <img src="images/img09.gif" width="290" height="198" alt="">
+           <img src="/images/img09.gif" width="290" height="198" alt="">
            </a>
            <h3><a href="#">邵大山</a>韩国金牌整形专家</h3>
            <p>技术擅长：自体脂肪丰胸，假体隆胸、各式方法重
@@ -60,7 +15,7 @@
          </li>
       <li>
           <a href="#">
-           <img src="images/img09.gif" width="290" height="198" alt="">
+           <img src="/images/img09.gif" width="290" height="198" alt="">
            </a>
            <h3><a href="#">邵大山</a>韩国金牌整形专家</h3>
            <p>技术擅长：自体脂肪丰胸，假体隆胸、各式方法重
@@ -87,9 +42,9 @@
       </ul>
       <div class="xmright_rmzt_box">
         <ul id="xmright_rmzt_ul">
-          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
-          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
-          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
+          <li><a href="#"><img src="/images/img11.png" width="290" height="164" alt=""></a></li>
+          <li><a href="#"><img src="/images/img11.png" width="290" height="164" alt=""></a></li>
+          <li><a href="#"><img src="/images/img11.png" width="290" height="164" alt=""></a></li>
         </ul>
         <ul id="xmright_rmzt_tit">
           <li><a  href="#">美容美容美容美容1</a></li>
@@ -114,5 +69,35 @@
     
     
     </aside>
-  </div>
-</div>
+
+
+<script>
+$(document).ready(function(e) {
+
+			//专家滚动处理
+           $.fn.scrollfn({
+                OverTime: 500,  //效果的缓冲时间
+                leftbtn:".zj_leftbtn",
+			    rightbtn:".zj_rightbtn",
+                type: 0,
+				deomShownum:1,
+                isAutomatic: 0
+                
+            }, "#xmright_zjtj_ul")	
+			
+			//热门专题
+			 $.fn.scrollfn({
+                OverTime: 500,  //效果的缓冲时间
+				Titleul:"#xmright_rmzt_tit", 
+                Btnul: "#xmright_rmzt_btn",
+                BannerBtnclass: "xmright_rmzt_cur",
+                type: 0,
+                isAutomatic: 1
+            }, "#xmright_rmzt_ul");
+					
+
+	
+	
+});
+
+</script>
