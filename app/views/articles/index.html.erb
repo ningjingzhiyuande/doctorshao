@@ -1,0 +1,118 @@
+<%=stylesheet_link_tag "nrstyle", "data-turbolinks-track" => true %>
+<%=render "/home/special_project"%>
+<div class="in_nr">
+   <div class="blank20"></div>
+  <div class="width1000">
+   
+    <article class="xmny_left">
+      <header class="mbx"> 您当前的位置：<a href="/">首页</a> > <a href="/articles">学术交流</a> </header>
+      <div class="blank20"></div>
+      <%if params[:page].blank? || params[:page]=="1"%>
+      <%a=@articles.first%>
+
+      <div class="xm_des"> <a href="/articles/<%=a.id%>"><%=image_tag a.image_url,width:"250",height: "172"%></a> 
+      <div class="xm_des_right">
+      	
+        <h1><%=a.title%></h1>
+        <p><%=a.content.try(:body)%> </p>
+        <div  class="xm_zxyu">
+        <a href="/articles/<%=a.id%>" class="tr1s">查看详细</a>
+       
+        </div>
+    
+      </div>
+
+      
+      </div>
+         <%end%>
+      <div class="blank20"></div>
+       <ul class="xm_list_ul">
+       	<%@articles[1..9].each do |article|%>
+         <li>
+           <h2><%=link_to article.title,a%></h2>
+           <p><%=article.content.try(:body)%>  <a href="/articles/<%=article.id%>">[更多内容]</a></p>
+         </li>
+         <%end%>
+         
+        
+       </ul>
+       
+       <div class="blank20"></div>
+      <%=will_paginate @articles%>
+      
+      
+      
+    </article>
+    <aside class="xmny_aside"> 
+      <div  class="xmright_zjtj">
+        <h2><a href="#">专家推荐 <span>Topic</span></a></h2>
+ 
+      <ul id="xmright_zjtj_ul">
+         <li>
+          <a href="#">
+           <img src="images/img09.gif" width="290" height="198" alt="">
+           </a>
+           <h3><a href="#">邵大山</a>韩国金牌整形专家</h3>
+           <p>技术擅长：自体脂肪丰胸，假体隆胸、各式方法重
+睑各种方法眼袋去除术、买不发杂畸形矫正术等。</p>
+              <a href="#" class="xm_zxzx tr1s">在线咨询</a>
+           
+         </li>
+      <li>
+          <a href="#">
+           <img src="images/img09.gif" width="290" height="198" alt="">
+           </a>
+           <h3><a href="#">邵大山</a>韩国金牌整形专家</h3>
+           <p>技术擅长：自体脂肪丰胸，假体隆胸、各式方法重
+睑各种方法眼袋去除术、买不发杂畸形矫正术等。</p>
+              <a href="#" class="xm_zxzx tr1s">在线咨询</a>
+           
+         </li>
+      </ul>
+      
+      <ul class="xmright_zjtj_btn">
+        <li class="zj_leftbtn"></li>
+        <li class="zj_rightbtn"></li>
+      </ul>
+           </div>
+    
+    
+    
+    <div class="xmright_rmzt">
+      <h2><a href="#">热门专题 <span>topic</span></a></h2>
+      <ul id="xmright_rmzt_btn">
+        <li class="xmright_rmzt_cur">1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <div class="xmright_rmzt_box">
+        <ul id="xmright_rmzt_ul">
+          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
+          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
+          <li><a href="#"><img src="images/img11.png" width="290" height="164" alt=""></a></li>
+        </ul>
+        <ul id="xmright_rmzt_tit">
+          <li><a  href="#">美容美容美容美容1</a></li>
+          <li><a  href="#">美容美容美容美容2</a></li>
+          <li><a  href="#">美容美容美容美容3</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="blank20"></div>
+     <div class="xm_right_rmwz">
+      <h2><a href="#">热门文章 <span>Artic</span></a></h2>
+      <span class="xm_right_rmwz_more"> <a href="#" class="tr1s">+</a></span>
+      <ul>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a> <span>14-07-09</span></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a> <span>14-07-09</span></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a> <span>14-07-09</span></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a> <span>14-07-09</span></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a><span>14-07-09</span></li>
+        <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a><span>14-07-09</span></li>
+      </ul>
+    </div>
+    
+    
+    </aside>
+  </div>
+</div>

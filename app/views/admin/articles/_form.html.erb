@@ -16,18 +16,23 @@
 		<span class="width_align_right">文章标题</span> 
        <span class="width_content">
        	<%=f.text_field :title,class: "field error project_title text large"%>
+       	 	<%=f.hidden_field :kind,value: @kind%>
        </span>
     </li>
    
 
      <li> 
 		<span class="width_align_right">文章内容 </span>
-		<span class="width_content"><%= kindeditor_tag :content %><%#= f.fields_for (action_name=="new" ? :content_attributes : :content)  do |c|%>
-                  <%#=c.kindeditor :body,:height=>650%>
-		<%#end%></span>
-		
-        
-       
+		<span class="width_content"><%#= kindeditor_tag :content %><%= f.fields_for (action_name=="new" ? :content_attributes : :content)  do |c|%>
+                  <%=c.kindeditor :body,:height=>650%>
+		<%end%></span>    
+    </li>
+    <li> 
+		<span class="width_align_right">封面图</span> 
+       <span class="width_content">
+       	<%=f.file_field :image%>
+     
+       </span>
     </li>
     <li><div class="actions">
     <%= f.submit '提交'%>
@@ -45,7 +50,7 @@ $(function() {
 
     $(".new_article").validate({
     	//errorElement: "b",
-    	debug: true,
+    	
         rules: {
        	 "article[title]": "required",
          content: {required: true}

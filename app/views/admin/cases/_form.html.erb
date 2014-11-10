@@ -1,0 +1,43 @@
+
+<%= form_for([:admin,@entry,@case],:html=>{class: "form"}) do |f| %>
+  
+<ul>
+	<li> 
+		<span class="width_align_right">名称/人名</span> 
+       <span class="width_content">
+       	<%=f.text_field :title%>
+       </span>
+    </li>
+    <li> 
+		<span class="width_align_right">术前图片</span> 
+       <span class="width_content">
+       	<%=f.file_field :before_image%>
+       </span>
+    </li>
+      <li> 
+		<span class="width_align_right">术后图片</span> 
+       <span class="width_content">
+       	<%=f.file_field :after_image%>
+       </span>
+    </li>
+     <li> 
+		<span class="width_align_right">说明</span> 
+       <span class="width_content">
+       	<%=f.text_field :info,class: "field error project_title text large"%>
+       </span>
+    </li>
+   
+   
+
+   
+    <li><div class="actions">
+    <%= f.submit '提交'%>
+  </div></li>
+    
+</ul>
+ 
+  
+<% end %>
+
+
+

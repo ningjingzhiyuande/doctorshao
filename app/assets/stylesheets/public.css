@@ -99,18 +99,19 @@ img{ border:0;}
 
 
 /************左侧*******************/
+.
 .nr_aside{ float:left; overflow:hidden; width:230px; }
 .nr_leftxm_list{ width:220px; overflow:hidden; margin:auto}
-.nr_leftxm_list ul li h3{ font-size:14px; color:#fff;   text-align:center; height:42px; line-height:42px; background:url(/images/bk59.png) no-repeat center; margin:5px 0px;
+.nr_leftxm_list h3 a{ color:#FFF}
+.nr_leftxm_list ul li h3{ font-size:14px; color:#fff;   text-align:center; height:42px; line-height:42px; background:url(../images/bk59.png) no-repeat center; margin:5px 0px;
  }
 .nr_leftxm_list ul li h3 { color:#fff; cursor:pointer}
 .nr_leftxm_list ul li hgroup{ margin:10px 0px;}
 .nr_leftxm_list ul li h3.xm_h3_click{  background:url(/images/bk59.png) no-repeat center; color:#fff}
-.nr_leftxm_list ul li h4{ font-size:12px; text-align:center; height:30px; font-weight:normal; line-height:30px; border:#d5d5d5 solid 1px; margin-top:2px; background:url(/images/bk60.png) no-repeat center right}
+.nr_leftxm_list ul li h4{ font-size:12px; text-align:center; height:30px; font-weight:normal; line-height:30px; border:#d5d5d5 solid 1px; margin-top:2px; background:url(../images/bk60.png) no-repeat center right}
 .nr_leftxm_list ul li h4 a{ color:#68208d;}
 .nr_leftxm_list ul li h4 a:hover{ color:#a50cd7}
 .nr_leftxm_list ul li hgroup{ display:none}
-
 
 /*****************************/
 

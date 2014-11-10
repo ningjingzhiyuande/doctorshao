@@ -9,17 +9,18 @@
 .park01_2 ul li{ width: 296px; height: 180px; padding: 5px; border: #D2D2D2 solid 1px; float: left; margin: 10px;;}
 .park01_sq{ position:relative; float:left; width:146px; height:180px;}
 .park01_sh{ position:relative; float:left;width:146px; height:180px; margin-left:4px; display:inline}
-.park01_2 ul li h2{ position:absolute; bottom:0px; left:0px; height:36px; line-height:36px; width:146px; background:url(/special_projects/1/images/bk02.png); font-size:16px; color:#f47497 ;}
+.park01_2 ul li h2{ position:absolute; bottom:0px; left:0px; height:36px; line-height:36px; width:146px; background:url(../images/bk02.png); font-size:16px; color:#f47497 ;}
 
 .zxzx{ width: 228px; height: 42px; display: block; margin: 0 auto;}
-.park02 header{ width: 100%; height: 70px; background: #851d9b;}
+.park02 div.header{ width: 100%; height: 70px; background: #851d9b;}
 
 .park02_box{ background: url(../images/bk01.png) no-repeat center top;}
 
+.park02_1{ height:495px;}
 .park02_1_left{ border: #D2D2D2 solid 1px;width:354px; height:382px; padding: 5px; float: left; margin-left: 66px;display: inline;}
 .park02_1_right{ float: left; margin-left: 100px; width: 460px; display: inline;}
-.park02_1_right h2{ font-size:24px;font-weight: normal; padding-left: 30px;}
-.park02_1_right h3{ font-size:18px;font-weight: normal; padding-left: 30px; color: #851d9b;}
+.park02_1_right h2{ font-size:24px;font-weight: normal; height:30px; line-height:30px; padding-left: 32px;}
+.park02_1_right h3{ font-size:18px;font-weight: normal; padding-left: 32px; height:30px; line-height:30px; color: #851d9b;}
 .park02_1_right p{  line-height: 24px;font-size: 14px; color: #666666; padding-left: 10px;}
 .park02_1_right h4{ background: #000000; color:#FFFFFF; width: 80px; height: 24px; line-height: 24px; font-size: 14px; text-align: center; margin-left: 10px;}
 .park02_1_right ul li{ line-height: 26px; font-size: 14px; padding-left: 10px;;}
@@ -27,8 +28,8 @@
 
 
 .park02_2_left{ float: left; margin-left: 20px; width: 445px;}
-.park02_2_left h2{ font-size:24px;font-weight: normal; padding-left: 280px;}
-.park02_2_left h3{ font-size:18px;font-weight: normal; padding-left: 200px; color: #851d9b;}
+.park02_2_left h2{ font-size:24px;font-weight: normal; height:30px; line-height:30px; padding-left: 280px;}
+.park02_2_left h3{ font-size:18px;font-weight: normal;height:30px; line-height:30px; padding-left: 200px; color: #851d9b;}
 .park02_2_left p{  line-height: 24px;font-size: 14px; color: #666666; padding-left: 10px;}
 .park02_2_left h4{ background: #000000; color:#FFFFFF; width: 80px; height: 24px; line-height: 24px; font-size: 14px; text-align: center; margin-left: 320px;}
 .park02_2_left ul li{ line-height: 26px; font-size: 14px; padding-left: 10px;;}

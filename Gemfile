@@ -33,6 +33,8 @@ gem 'pry'
 gem 'pry-remote'
 gem 'pry-nav'
 
+gem 'will_paginate'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

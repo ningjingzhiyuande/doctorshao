@@ -3,7 +3,7 @@
 	<div id="main-content">
 		<%=render "shared/notice"%>
         <div class="title">
-		<h3>后台-文章管理<span style="padding-left:700px"><a href="/admin/articles/<%=params[:kind]%>/new/">+ 添加</a></span></h3>
+		<h3>后台-<%=name_for_kind(@kind)%>管理<span style="padding-left:700px"><a href="/admin/articles/<%=params[:kind]%>/new/">+ 添加</a></span></h3>
 			
 			
 		</div>
@@ -16,7 +16,7 @@
 						<tr>
 							<th>#ID</th>
 							<th>标题</th>
-							<th>内容</th>
+							
 									    
 						    <th>操作</th> 
 							
@@ -26,14 +26,16 @@
 						<% @articles.each do |article| %>
 						<tr>
 							<td class="center"><%=article.id%></td> 
-							<td><%=article.name%></td> 
+							<td><%=article.title%></td> 
 						  
-						    <td><%= article.content.try(:body) %></td> 
+						  
 	
 						    <td>
 								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/articles/<%=article.id%>/edit">修改
 								</a> 
 								<%= link_to '删除', admin_article_path(article), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+                                
+								<%= link_to (article.is_recommend? ? '取消推荐' : "推荐到首页"),recommend_admin_article_path(article),class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
 						
 							</td>
 					

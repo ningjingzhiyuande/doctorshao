@@ -2,7 +2,7 @@
 .width1000{ width: 1000px; margin:0 auto; }
 .park01{ border: #ececec solid 1px;border-radius: 8px ;}
 
-section header{ margin-top: 10px;}
+div div.header{ margin-top: 10px;}
 
 .park01_1_left{ width: 520px; float: left; padding: 0px 20px;}
 .park01_1_left p{ font-size: 14px; line-height: 24px; color: #666666; text-indent: 28px;}

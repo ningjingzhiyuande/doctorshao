@@ -1,0 +1,125 @@
+ <h2 class="ybzxh2">
+	相关项目
+</h2>
+<div class="blank30">
+</div>
+<ul class="ybzx_ul">
+	<%@project.children.each do |p|%>
+	 <li>
+        <div class="tr1s"><h3><%=link_to p.name,other_project_path(p)%></div>
+      
+      </li>
+
+
+	<%end%>
+
+	
+</ul>
+<div class="blank30">
+</div>
+<h2 class="yszjalH2">
+	项目疑问 Project Question
+</h2>
+<div class="blank10">
+</div>
+<ul class="ysxmH2_ul">
+	<%@questions.each_with_index do |q,i|%>
+
+	<li>
+		<a href="#"><img src="/images/img36.png" width="148" height="108" alt="" /></a> 
+		<div>
+			<i>0<%=i+1%></i> 
+			<h3>
+				<%=q.question%>
+			</h3>
+			<p>
+				<%=raw q.answer%>
+			</p>
+		</div>
+	</li>
+	<%end%>
+	
+</ul>
+<div class="blank30">
+</div>
+<!--
+<h2 class="yszjalH2">
+	专家团队
+</h2>
+<div class="blank20">
+</div>
+<ul class="zjtd_ul">
+	<li>
+		<a href="#"><img src="/images/img15.png" width="214" height="220" alt="" /> </a> 
+		<h3>
+			<a href="#">邵大山</a> 韩国金牌整形专家
+		</h3>
+		<p>
+			擅长：自体脂肪丰胸，假体隆胸、各
+          式方法重睑各种方法眼袋去除术、买
+          不发杂畸形矫正术等。
+		</p>
+		<div class="in_zjcard_zx">
+			<a href="#" class="tr1s">在线咨询</a> <a href="#" class="tr1s">在线预约</a> 
+		</div>
+	</li>
+	<li>
+		<a href="#"><img src="/images/img15.png" width="214" height="220" alt="" /> </a> 
+		<h3>
+			<a href="#">邵大山</a> 韩国金牌整形专家
+		</h3>
+		<p>
+			擅长：自体脂肪丰胸，假体隆胸、各
+          式方法重睑各种方法眼袋去除术、买
+          不发杂畸形矫正术等。
+		</p>
+		<div class="in_zjcard_zx">
+			<a href="#" class="tr1s">在线咨询</a> <a href="#" class="tr1s">在线预约</a> 
+		</div>
+	</li>
+	<li>
+		<a href="#"><img src="/images/img15.png" width="214" height="220" alt="" /> </a> 
+		<h3>
+			<a href="#">邵大山</a> 韩国金牌整形专家
+		</h3>
+		<p>
+			擅长：自体脂肪丰胸，假体隆胸、各
+          式方法重睑各种方法眼袋去除术、买
+          不发杂畸形矫正术等。
+		</p>
+		<div class="in_zjcard_zx">
+			<a href="#" class="tr1s">在线咨询</a> <a href="#" class="tr1s">在线预约</a> 
+		</div>
+	</li>
+</ul>
+-->
+<h2 class="yszjalH2">
+	案例对比
+</h2>
+<div class="blank20">
+</div>
+<div class="aldbH2_box">
+	<ul class="aldb_ul" id="aldb_ul">
+		<%@cases.each do |ca|%>
+		<li>
+			<div class="aldb_border">
+				<div class="beforeimg">
+					<%=image_tag ca.before_image,width:150,height:180%>
+					<span class="tr1s"><a href="#">before</a></span> 
+				</div>
+				<div class="afterimg">
+					<%=image_tag ca.after_image,width:150,height:180%> <span class="tr1s"><a href="#">after</a></span> 
+				</div>
+			</div>
+			<h2>
+				<%=ca.title%>
+			</h2>
+		</li>
+		<%end%>
+		
+	</ul>
+	<div class="aldb_left">
+	</div>
+	<div class="aldb_right">
+	</div>
+</div>

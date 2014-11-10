@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023081540) do
+ActiveRecord::Schema.define(version: 20141107044430) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20141023081540) do
 
   add_index "articles", ["kind"], name: "index_articles_on_kind", using: :btree
   add_index "articles", ["status_id"], name: "index_articles_on_status_id", using: :btree
+
+  create_table "cases", force: true do |t|
+    t.string   "before_image"
+    t.string   "after_image"
+    t.string   "title"
+    t.string   "info"
+    t.integer  "entry_id"
+    t.string   "entry_type"
+    t.boolean  "is_recommend"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contents", force: true do |t|
     t.string   "item_id"
@@ -59,6 +71,16 @@ ActiveRecord::Schema.define(version: 20141023081540) do
 
   add_index "pages", ["kind"], name: "index_pages_on_kind", using: :btree
 
+  create_table "person_cards", force: true do |t|
+    t.string   "title"
+    t.integer  "entry_id"
+    t.string   "entry_type"
+    t.string   "info"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", force: true do |t|
     t.string   "name"
     t.string   "short_title"
@@ -67,6 +89,16 @@ ActiveRecord::Schema.define(version: 20141023081540) do
     t.integer  "parent_id"
     t.string   "image"
     t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "question"
+    t.text     "answer"
+    t.integer  "entry_id"
+    t.string   "entry_type"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

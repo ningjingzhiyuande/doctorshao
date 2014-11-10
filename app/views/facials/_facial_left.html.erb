@@ -5,7 +5,7 @@
       <ul>
       	<%@other_projects.each do |project|%>
         <li>
-          <h3 class="<%=@parent_id==project.id ? 'xm_h3_click' : ''%>"><%=project.name%><%#=link_to project.name,other_project_path(project)%></h3>
+          <h3 class="<%=@parent_id==project.id ? 'xm_h3_click' : ''%>"><%#=project.name%><%=link_to project.name,other_project_path(project)%></h3>
           <hgroup style="<%=@parent_id==project.id ? 'display:block' : ''%>">
             <%project.children.each do |c|%>
             <h4><%=link_to c.name,other_project_path(c)%></h4>
@@ -91,6 +91,7 @@
         </li>-->
       </ul>
     </div>
+    <!--
     <div class="nr_leftrmzt">
       <h2><a href="#">热门专题 <span>topic</span></a></h2>
       <ul id="nr_leftrmzt_btn">
@@ -110,8 +111,8 @@
           <li><a  href="#">美容美容美容美容3</a></li>
         </ul>
       </div>
-    </div>
-    <div class="nr_leftrmwz">
+    </div>-->
+    <!--<div class="nr_leftrmwz">
       <h2><a href="#">热门文章 <span>Artic</span></a></h2>
       <span class="nr_leftrmwz_more"> <a href="#" class="tr1s">+</a></span>
       <ul>
@@ -122,8 +123,8 @@
         <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
         <li><a href="#">看我开眼角前后对比图 小眼瞬间“变”</a></li>
       </ul>
-    </div>
-    <div class="nr_leftlxwm">
+    </div>-->
+  <!--  <div class="nr_leftlxwm">
       <hgroup>
         <h3 class="in_zxrx"> 400-000-0000<br>
           <span>24小时免费咨询热线</span> </h3>
@@ -131,7 +132,7 @@
           <span>门诊时间（全年无休）</span> </h3>
       </hgroup>
       <div class="in_zxyy"> <a href="#" class="tr1s in_zxyycur">在线咨询</a> <a href="#" class="tr1s">免费预约</a> </div>
-    </div>
+    </div>-->
   </aside>
 
 

@@ -1,0 +1,36 @@
+<%=render "shared/admin_setting_left"%>
+
+<div id="main-wrapper">
+	<div id="main-content">
+		<%=render "shared/notice"%>
+        <div class="title">
+			<h3>编辑</h3>
+		</div>
+	<div class="portlet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all form-container">
+       <div class="portlet-content">
+            <%= render 'form' %>
+        </div>
+	</div>
+	<div class="clearfix"></div>
+
+</div>
+</div>
+	
+<script>
+$(function() {
+
+    $(".form").validate({
+    	errorElement: "b",
+        rules: {
+       	 "case[title]": "required"
+       	
+       //  "project[image]": "required"
+        },
+       messages:{
+        "case[title]":"不能为空"
+       
+      //  "project[image]": "请选择图片"
+    }})
+
+})
+</script>

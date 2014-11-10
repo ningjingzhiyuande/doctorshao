@@ -1,7 +1,7 @@
 
 .this_wrap{ width: 1000px; margin: 0 auto;}
 
-section header h1 img{ display: block}
+ div.header h1 img{ display: block}
 
 .section_box{ border: #dcdcdc solid 1px; width: 983px; padding: 10px 0px; overflow: hidden; margin-left: 11px; border-top: 0;}
 

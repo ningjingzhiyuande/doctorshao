@@ -6,6 +6,7 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   def other
   	@projects = Project.other_projects
+
   end
 
   def create
@@ -23,9 +24,11 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   def new
   	@project = Project.new
+  	@flag = param["flag"]=="other" ?  false : true
   end
 
   def edit
+  	@flag = @project.is_special
   end
 
   def update

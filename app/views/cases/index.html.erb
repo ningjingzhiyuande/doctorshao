@@ -1,0 +1,144 @@
+
+<%=stylesheet_link_tag "anliliststyle", "data-turbolinks-track" => true %>
+<div class="banner banneranlilist">
+<img src="/images/banner08.png" width="1440" height="580" alt="">
+</div>
+
+<div class="anliwrap">
+<div class="anlilist_mbx">
+  
+ <div class="mbx"> 您当前的位置：<a href="/">首页</a> > <a href="/cases">成功案例</a> </div>
+ 
+</div>
+	<!--
+<div class="blank30"></div>
+
+
+<div class="anli_nav">
+
+<div class="anli_nav_box">
+  <ul id="anli_nav_ul">
+
+     <li><a href="#">眼部案例</a></li>
+      <li><a href="#">鼻部案例</a></li>
+       <li><a href="#">面部案例</a></li>
+        <li><a href="#">胸部案例</a></li>
+         <li><a href="#">吸脂案例</a></li>
+          <li><a href="#">脂肪移植案例</a></li>
+           <li><a href="#">注射案例</a></li>
+             <li><a href="#">形体雕塑案例</a></li>
+                   <li><a href="#">脂肪移植案例</a></li>
+           <li><a href="#">注射案例</a></li>
+             <li><a href="#">形体雕塑案例</a></li>
+  
+   </ul>
+
+</div>
+
+<div class="anli_nav_btn">
+  <a href="javascript:;" class="left_btn"></a>
+   <a href="javascript:;"  class="right_btn"></a>
+</div>
+
+
+</div>
+
+<div class="blank20"></div>
+<section  class="sqsh_img">
+
+<div class="sqsh_img_box">
+   <ul id="sqsh_img_ul">
+     <li>
+ 
+         <figure > 
+         <img src="images/img38.png" width="384" height="320" alt="">
+          <figcaption>术前</figcaption>
+         </figure>
+        <figure> 
+         <img src="images/img39.png" width="384" height="320" alt="">
+          <figcaption>术后</figcaption>
+         </figure>
+     
+     </li>
+      <li>
+ 
+         <figure > 
+         <img src="images/img38.png" width="384" height="320" alt="">
+          <figcaption>术前</figcaption>
+         </figure>
+        <figure> 
+         <img src="images/img39.png" width="384" height="320" alt="">
+          <figcaption>术后</figcaption>
+         </figure>
+     
+     </li>
+     
+   
+   
+   </ul>
+
+
+</div>
+ <a href="javascript:;" class="sqsh_left_btn"></a>
+   <a href="javascript:;"  class="sqsh_right_btn"></a>
+
+</section>
+-->
+<div class="blank20"></div>
+
+<section class="anli_list_right">
+  <div class="anli_lists">
+    <ul>
+    	<%@cases.each do |ca|%>
+      <li>
+        <h2><%=ca.title%></h2>
+        <%=image_tag ca.after_image_url,width:"244",height: "118"%>
+         <P><%=ca.info%></P>
+      </li>
+      <%end%>
+      
+    
+    
+    </ul>
+  
+  
+  </div>
+  <div class="blank20"></div>
+      <%=will_paginate @cases%>
+</section>
+<aside class="anli_list_left">
+  <header>
+    <h2>
+    案例展示
+    <span>The case shows </span></h2>
+  </header>
+    <div class="aside_list_box">
+    <dl>
+      <dt></dt>
+    </dl>
+    <%@other_projects.each do |c|%>
+     <dl>
+        <dt><%=c.name%></dt>
+        <%c.children.each do |f|%>
+        <dd><%=link_to f.name,project_cases_path(c)%></dd>
+        <%end%>
+     </dl>
+     <%end%>
+    
+    <div class="blank20"></div>
+    </div>
+
+
+
+</aside>
+
+
+<div class="blank20"></div>
+
+
+
+
+
+
+</div>
+

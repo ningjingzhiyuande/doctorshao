@@ -14,8 +14,10 @@
    background: url(../images/icon_zxzx.png) no-repeat  center left; height: 20px; line-height: 16px; display: block; }
 .park01 header .zxzx:hover{ color:#edbdfd;}
 
-.park01_01{  float:left;width:380px ; height: 336px; overflow: hidden; background: url(../images/bk05.png) no-repeat center right; padding:0px 10px;}
 
+.park01_01{  float:left;width:680px ; height: 336px; overflow: hidden; background: url(../images/bk05.png) no-repeat center right; padding:0px 10px; position:relative}
+
+.park01_tel{ position:absolute; bottom:0px;}
 .park01_01 p{ font-size: 16px; line-height: 28px; color: #666666;}
 
 
@@ -44,7 +46,7 @@
 .park01_03_textarea{ width: 228px; height: 135px; border: #C4C4C4 solid 1px;box-shadow: 1px 1px 3px #C1C1C1 inset;}
 .park01_03_sub{ border: none; width: 106px; height: 31px; background: url(../images/bk14.png); color:#FFFFFF; text-align: center;}
 /*park02*/
-.park02 header{ position: relative; width: 1020px; height: 82px;}
+.park02 div.header{ position: relative; width: 1020px; height: 82px;}
 .park02 #park02_btn{ position: absolute; width: 500px; top: 30px; right: 0px;}
 .park02 #park02_btn  li{ float: left;  width: 65px; text-align: center; height: 35px; font-size:14px ; line-height: 40px; cursor: pointer;}
 .park02 #park02_btn  .park02_btn_cur{ background:url(../images/bk17.png) no-repeat center bottom; color: #ab14c5;}

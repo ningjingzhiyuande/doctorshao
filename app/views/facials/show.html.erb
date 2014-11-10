@@ -2,7 +2,35 @@
 <div class="in_nr">
   <div class="blank30"></div>
   <div class="width1000">
+  	  <article class="nr_dy">
+  	  	<!--
+    <header class="mbx">
+     您当前的位置：<a href="/">首页</a> > <a href="/facials">其他项目</a> > <%=link_to @project.root.name,other_project_path(@project.root.id)%> <%unless @project.root?%>  >  <%=link_to @project.name,other_project_path(@project.id)%>
+     <%end%>
+    
+    </header>   --> 
+     <div class="blank10"> </div>
+
+    <%unless @project.root?%>
+  
+   
+    <div  class="nr_dyp_nav">
+   
+     <h2>项目介绍--<%=@project.name%></h2>
+        
+  
+    </div>
+      <div class="blank10"> </div>
+    <%end%>
     <%=raw @project.content.try(:body)%>
+
+     <%=render "other_info" if @project.root?%>
+
+
+   
+
+
+    </article>
    <%=render "facial_left"%>
 </div>
 </div>

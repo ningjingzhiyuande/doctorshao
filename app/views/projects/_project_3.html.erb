@@ -1,106 +1,46 @@
 <%= stylesheet_link_tag    "/special_projects/#{params[:id]}/css/style"%>
-<div class="banner"> <a href="#"> <img src="/special_projects/3/images/banner01.png" width="100%"> </a> </div>
-<div class="blank30"></div>
-<div class="this_wrap">
-	<section class="park01">
-		<header>
-			<h1><img src="/special_projects/3/images/h1_1.png" width="1000" height="55" alt="邵氏无痕三层收紧眼袋祛除术   立显诱惑亮眼"></h1>
-		</header>
-		<div class="blank10"></div>
-	<div class="park01_left">
-		<img src="/special_projects/3/images/img01.png" width="344" height="173" alt="邵氏无痕三层收紧眼袋祛除术">
-	</div>	
-	<div class="park01_right">
-		<p>  邵氏无痕三层收紧眼袋祛除术，采用微创技术，精细处理，主要通过收紧去除皮肤改善眼袋皮肤松弛，去除皱纹；收紧眼轮匝肌改善年老外翻的下睑，重建
-			眼底肌肉；去除眶脂，收紧眶隔改善眶隔松弛状态，重置眶隔内脂肪</p>
-		<div class="blank20"></div>
-		<img src="/special_projects/3/images/img02.png"  width="636" height="87" alt="">
-	</div>
-		
-	</section>
+
+
+<%=raw @project.content.try(:body)%>
+
 	<div class="blank30"></div>
-	<section class=" park02">
-		<header>
-			<h1><img src="/special_projects/3/images/h1_2.png" alt="邵氏无痕三层收紧眼袋祛除术特点  " width="1000" height="55" usemap="#Map">
-              <map name="Map">
-                <area shape="rect" coords="826,9,996,48" href="#">
-              </map>
-			</h1>
-		</header>
-	<div class="blank10"></div>	
-	<div class="park02_left">
-		
-		<ul>
-		<li><span>01</span>拥有平复自然的下眼睑，重建下眼睑形态，无痕迹显露，在对短的时间内恢复。</li>
-		<li><span>02</span>改善皮肤松弛和皱纹，矫正外翻下眼睑。</li>
-		<li><span>03</span>改善皮肤松弛和皱纹，矫正外翻下眼睑。</li>
-		<li><span>04</span>去除臃肿的肌肉，提升下垂的下睑。</li>
-			
-		</ul>
-		
-	</div>	
-	<div class="park02_right">
-		<ul id="park02_scroll">
-			<li><img src="/special_projects/3/images/img03.png" width="256" height="256" alt=""></li>
-			<li><img src="/special_projects/3/images/img03.png" width="256" height="256" alt=""></li>
-			<li><img src="/special_projects/3/images/img03.png" width="256" height="256" alt=""></li>
-		</ul>
-		<ul id="park02_btn">
-			<li class="cur">1</li>
-			<li>2</li>
-			<li>3</li>
-			
-		</ul>
-		
-	</div>	
-		
-	</section>
-	<div class="blank30"></div>
-	<section class="park03">
-		<header>
+	<div class="park03">
+		<div class="header">
 			<h1><img src="/special_projects/3/images/h1_3.png" width="1000" height="55" alt="邵氏无痕三层收紧眼袋祛除术 —— 经典案例   "></h1>
-		</header>
+		</div class="header">
 		<div class="blank30"></div>
+
+
+
   <div class=" park03_box">
   	<div class="park03_scroll_box">
   		<ul id="park03_scroll">
-  			<li>
-             <figure class="before">
-     
-              <a href="#"><img src="/special_projects/3/images/img04_01.png" width="386" height="260" alt="经典案例"></a>
+  		
+  				<%@cases.each do |ca|%>
+			<li>
+            <div class="park01_sq">
+            	 <figure class="before">
+     <%=image_tag ca.before_image,width: "386",height: "260"%>
+              
                <figcaption>手术前</figcaption>
   			</figure>
              <figure class="after">
              
-              <a href="#"><img src="/special_projects/3/images/img04_02.png" width="386" height="260" alt="经典案例"></a>
+              <%=image_tag ca.before_image,width: "386",height: "260"%>
                <figcaption>手术后</figcaption>
   			</figure>
+
+            	
+             
+           
+            
+            </li>
+            <%end%>
+
+            
             </li>
             
-            <li>
-             <figure class="before">
-     
-              <a href="#"><img src="/special_projects/3/images/img04_01.png" width="386" height="260" alt="经典案例"></a>
-               <figcaption>手术前</figcaption>
-  			</figure>
-             <figure class="after">
-             
-              <a href="#"><img src="/special_projects/3/images/img04_02.png" width="386" height="260" alt="经典案例"></a>
-               <figcaption>手术后</figcaption>
-  			</figure>
-            </li>
-  			<li>
-             <figure class="before">
-     
-              <a href="#"><img src="/special_projects/3/images/img04_01.png" width="386" height="260" alt="经典案例"></a>
-               <figcaption>手术前</figcaption>
-  			</figure>
-             <figure class="after">
-             
-              <a href="#"><img src="/special_projects/3/images/img04_02.png" width="386" height="260" alt="经典案例"></a>
-               <figcaption>手术后</figcaption>
-  			</figure>
-            </li>
+          
   		</ul>
   		
   		
@@ -112,19 +52,9 @@
 		
 		
 		
-	</section>
-	<div class="blank30"> </div>
-	<section class="park04 person_card">
-		<header>
-			<h1><img src="/special_projects/3/images/h1_4.png" width="1000" height="55" alt="邵氏无痕三层收紧眼袋祛除术 —— 权威专家   "></h1>
-		</header>
-		<div class="section_box">
-		<div class="blank30"></div>
-        <div class="blank20"></div>	
-
-<%=render "/projects/person_card"%>
-<div class="blank30"></div>
-<div class="blank30"></div>
 	</div>
-</section>
-</div>
+
+
+
+	<div class="blank30"> </div>
+<%=render "person_card"%>

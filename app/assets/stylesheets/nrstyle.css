@@ -12,8 +12,8 @@
 
 .nr_dyp h1{ line-height:60px; font-size:24px;  }
 .nr_dyp_nav{ height:32px; width:100%; background:#6b528b}
-.nr_dyp_nav ul li { float:left;line-height:32px; cursor:pointer}
-.nr_dyp_nav ul li  h2{ font-size:14px; font-weight:normal; color:#FFF; width:118px; border-right:#FFF solid 1px; text-align:center;  }
+.nr_dyp_nav { float:left;line-height:32px; cursor:pointer}
+.nr_dyp_nav   h2{ font-size:14px; font-weight:normal; color:#FFF;   text-align:left; padding-left: 20px;  }
 .nr_dyp_nav ul li.nr_dyp_navli_cur{background:#68208d url(/images/downicon.png) no-repeat center right; }
 
 .nr_dyp_box{ width:100%; overflow:hidden}
@@ -29,13 +29,16 @@
 .ybzx_mes img{ display:block; float:left; margin-right:20px; display:inline}
 .ybzx_mes p{ font-size:14px; line-height:26px; color:#666; font-size:12px;}
 .ybzxh2 { background:url(/images/bk21.png); width:80px; height:23px; text-align: center; line-height:22px; font-size:14px; color:#fff}
-.ybzx_ul li{ float:left; width:75px; margin:0px 10px; display:inline}
-.ybzx_ul li img{ display:block; border-radius:6px; }
-.ybzx_ul li div{ padding:5px; overflow:hidden; background:#6a158c;border-radius:6px; }
-.ybzx_ul li div:hover{ background:#a746d0}
-.ybzx_ul li h3{ font-size: 14px; text-align: center; line-height:36px; font-weight:normal}
-.ybzx_ul li h3 a{ color:#666}
-.ybzx_ul li h3 a:hover{ color:#6a158c; text-decoration:underline}
+
+.ybzx_ul li{ float:left;  height:28px; display:inline; border-radius:2px; padding:5px 25px 5px 5px; background:url(../images/img13.png) no-repeat center right }
+.ybzx_ul li div{ border:#8841a5 solid 1px; padding:0px 8px; border-radius:3px;color:#fff;background:#8841a5  }
+.ybzx_ul li div:hover{ }
+.ybzx_ul li div a{ color:#fff }
+.ybzx_ul li h3{ font-size:14px; font-weight:normal; line-height:28px; }
+
+
+
+
 
 .yszjalH2{ background:url(/images/bk20.png); height:46px; width:680px; padding-left:38px; font-size:18px; line-height:36px; font-weight:normal; color:#a071b5}
 .ysxmH2_ul li{ width:100p%; height:98px; margin:10px 0px;}
@@ -113,8 +116,8 @@
 .nr_leftxm_list_about ul li:hover h3{background:#6b528b; color:#fff}
 .nr_aside_h2_about{ height: 30px;  line-height: 30px; font-size: 16px; color: #9f7926;}
 /********************联系我们***************/
-.lxwm_nr_zj01_img,.lxwm_nr_zj02_img{ width: 182px; height: 182px; overflow: hidden; float: left; padding: 20px;;}
-.lxwm_nr_zj01_des,.lxwm_nr_zj02_des{ float: left; width: 400px; padding: 20px; position: relative;border-left: #d9d9d9 solid 1px;}
+.lxwm_nr_zj01_img,.lxwm_nr_zj02_img{ width: 222px; height: 182px; overflow: hidden; float: left; padding: 20px;padding-left:50px;}
+.lxwm_nr_zj01_des,.lxwm_nr_zj02_des{ float: left; width: 650px; padding: 20px; position: relative;border-left: #d9d9d9 solid 1px;}
 .lxwm_nr_zj01_des h2{ width: 141px; height: 31px; background: url(/images/bk52.png); position: absolute; left: 0px ; top: 0px; text-align: center; }
 .lxwm_nr_zj01_des p,.lxwm_nr_zj02_des p{ font-size: 14px; line-height: 26px;}
 .lxwm_nr_zj01_des h2 a,.lxwm_nr_zj02_des h2 a{ color: #FFFFFF; line-height: 30px; font-size: 18px;}

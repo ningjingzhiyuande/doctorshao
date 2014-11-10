@@ -8,15 +8,18 @@
       主要是面部设计，提倡面部年轻化，整形的协调性，为您惊喜打造年轻美丽的面部形象。 </p>
   </div>
   <div class="blank20"></div>
-  <section class="park01 width1020">
-    <header>
+  <div class="park01 width1020">
+    <div class="div class="header"">
       <h1><img src="/special_projects/dingzhi/images/bk02.png" alt="个性化美丽定制"></h1>
-      <a href="#" class="zxzx tr1s">在线咨询</a> </header>
+      
     <div class="blank20"></div>
     <div class="park01_01">
       <p>邵大山拥有16年的从业经验，多年来致力研究东方 女性的面部轮廓，提出“个性化定制整形“理念。 在面部骨骼、面部除皱、眼部整形、鼻部整形、乳 房整形、吸脂减肥等方面总结出一套自己独特的手 术方法。10年赴韩整形临床经验，被誉为”韩国金 牌整形专家“。把具有高难度的颜面骨成形手术作 为主要领域。 </p>
       <div class="blank20"></div>
-      <a href="#"> <img src="/special_projects/dingzhi/images/bk03.png"> </a> </div>
+      <div class="park01_tel">
+      <a href="#"> <img src="/special_projects/dingzhi/images/bk03.png"> </a>
+     </div>
+       </div>
     <div class="park01_02">
       <div class="park01_02_scroll"> 
        <ul id="park01_02_scrollul">
@@ -37,56 +40,32 @@
       <div class="park01_02_zxxm">
         <h2>整形项目</h2>
         <ul>
-          <li><a href="#">面部整形</a></li>
-          <li><a href="#">眼部整形</a></li>
-          <li><a href="#">鼻部整形</a></li>
-          <li><a href="#">乳房整形</a></li>
-          <li><a href="#">吸脂减肥</a></li>
-          <li><a href="#">脂肪移植</a></li>
-          <li><a href="#">形体雕塑</a></li>
+          <%@other_projects.each do |c|%>
+        <li>
+        	 <%=link_to c.name,other_project_url(c)%>
+          
+        </li>
+        <%end%>	
+         
         </ul>
       </div>
     </div>
-    <div class="park01_03">
-      <h2>美丽计划从这里开始！</h2>
-      <form>
-        <table width="280" border="0"  align="center" class="park01_03_tab">
-          <tr>
-            <td  width="50" height="50">姓名：</td>
-            <td ><input  type="text" class="park01_03_text"></td>
-          </tr>
-          <tr>
-            <td>电话：</td>
-            <td><input type="text" class="park01_03_text"></td>
-          </tr>
-          <tr>
-            <td valign="top"><div class="blank10"></div>
-              留言：</td>
-            <td><div class="blank10"></div>
-              <textarea class="park01_03_textarea"></textarea></td>
-          </tr>
-          <tr>
-            <td colspan="2"><div class="blank20"></div>
-              <input type="submit" class="park01_03_sub" value="提交留言"></td>
-          </tr>
-        </table>
-      </form>
-    </div>
+    
     <div class="blank30"></div>
-  </section>
-  <section class="park02">
-    <header>
+  </div>
+  <div class="park02">
+    <div class="header">
       <h1> <img src="/special_projects/dingzhi/images/bk07.png" width="1020" height="82"></h1>
       <ul id="park02_btn">
-        <li class="park02_btn_cur">面部整形</li>
-        <li>眼部整形</li>
-        <li>鼻部整形</li>
-        <li>乳房整形</li>
-        <li>吸脂减肥</li>
-        <li>脂肪移植</li>
-        <li>形体雕塑</li>
+      	  <%@other_projects.each_with_index do |c,i|%>
+        <li class="<%#= i==0 ? "park02_btn_cur" : ""%>">
+        	 <%=link_to c.name,other_project_url(c)%>
+          
+        </li>
+       <%end%>
+       
       </ul>
-    </header>
+    </div>
     <div class="blank20"></div>
     <div class="park02_content" id="park02_content">
       <div class="park02_one park02_one_01">
@@ -103,17 +82,11 @@
         </div>
         <div class="park02_one_right"> <img src="/special_projects/dingzhi/images/bk09.png"> </div>
       </div>
-      <div  class="park02_one"> 2 </div>
-      <div  class="park02_one"> 3 </div>
-      <div  class="park02_one"> 4 </div>
-      <div  class="park02_one"> 5 </div>
-      <div  class="park02_one"> 6 </div>
-      <div  class="park02_one"> 7 </div>
-      <div  class="park02_one"> 8 </div>
+
     </div>
-  </section>
-  <section class="park03 width1020">
-    <header > <img src="/special_projects/dingzhi/images/bk10.png"> <a href="#" class="zxzx tr1s">在线咨询</a> </header>
+  </div>
+  <div class="park03 width1020">
+    <div class="header" > <img src="/special_projects/dingzhi/images/bk10.png"> <a href="#" class="zxzx tr1s">在线咨询</a> </div>
    
     <div class="park03_content">
       <div class="park03_content_left"> <img src="/special_projects/dingzhi/images/img02.png" width="295" height="370" alt="333"> </div>
@@ -137,11 +110,11 @@
         </ul>
       </div>
     </div>
-  </section>
-  <section  class="park04">
-    <header>
+  </div>
+  <div  class="park04">
+    <div class="header">
       <h1><img src="/special_projects/dingzhi/images/bk12.png"></h1>
-      <a href="#" class="zxzx tr1s">在线咨询</a> </header>
+      <a href="#" class="zxzx tr1s">在线咨询</a> </div>
     
     <div class="park04_btnbox">
       <ul id="park04_btnul">
@@ -265,9 +238,9 @@
       </ul>
     </div>
     <div class="blank20"></div>
-  </section>
+  </div>
 </div>
-
+</div>
 <script>
  	$(document).ready(function(){
  		$(".park02_one_01_zxzx li").mouseover(function(){
@@ -281,7 +254,7 @@
  			
  		})
  		
- 		  $.fn.scrollfn({
+ 		 $.fn.scrollfn({
                 OverTime: 500,  //效果的缓冲时间
                  Btnul: "#park01_02_btn",
                  BannerBtnclass: "park01_02_btn_cur",
@@ -291,7 +264,7 @@
 				BnanerGeshu:1
             }, "#park01_02_scrollul")	
             
-             $.fn.scrollfn({
+          /*    $.fn.scrollfn({
                 OverTime: 500,  //效果的缓冲时间
                 Btnul:"#park02_btn",
                 BannerBtnclass:"park02_btn_cur",
@@ -301,7 +274,7 @@
 				 BnanerGeshu:1,
 				 ImgBoxChild:".park02_one"
             }, "#park02_content")	
-            
+            */
              $.fn.scrollfn({
                 OverTime: 500,  //效果的缓冲时间
                 Btnul:"#park04_btnul",

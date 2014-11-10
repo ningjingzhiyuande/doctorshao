@@ -1,0 +1,49 @@
+
+<%= form_for([:admin,@entry,@question],:html=>{class: "form"}) do |f| %>
+  
+<ul>
+	<li> 
+		<span class="width_align_right">问题</span> 
+       <span class="width_content">
+       	<%=f.text_field :question,class: "field error project_title text large"%>
+       </span>
+    </li>
+    <li> 
+		<span class="width_align_right">回答</span> 
+       <span class="width_content">
+       	<%=f.kindeditor :answer%>
+       </span>
+    </li>
+     
+   
+   
+
+   
+    <li><div class="actions">
+    <%= f.submit '提交'%>
+  </div></li>
+    
+</ul>
+ 
+  
+<% end %>
+
+	
+<script>
+$(function() {
+
+    $(".form").validate({
+    	errorElement: "b",
+        rules: {
+       	 "question[question]": "required"
+       	 
+        },
+       messages:{
+        "question[question]":"不能为空"
+       
+      //  "project[image]": "请选择图片"
+    }})
+
+})
+</script>
+

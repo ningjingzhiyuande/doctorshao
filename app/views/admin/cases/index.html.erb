@@ -1,0 +1,66 @@
+<%=render "shared/admin_setting_left"%>
+<div id="main-wrapper">
+	<div id="main-content">
+		<%=render "shared/notice"%>
+        <div class="title">
+		<h3>后台-案例管理</h3>
+			
+			
+		</div>
+
+
+        <div class="hastable">				
+						<table id="datatable" class="display"> 
+						<thead> 
+						<tr>
+							<th>#ID</th>
+							<th>案例名称</th>
+							<th>术前照片</th>
+							<th>术后照片</th>
+							<th>说明</th>
+							<th>隶属</th>	    
+						    <th>操作</th> 
+							
+						</tr> 
+						</thead> 
+						<tbody> 
+						 	<% @cases.each do |ca| %>
+					
+					         <tr>
+                
+                   <td><%= ca.id%></td>
+                   <td><%= ca.title%></td>
+                   <td><%=image_tag ca.before_image,width:100,height: 100%></td>
+                    <td><%=image_tag ca.after_image,width:100,height: 100%></td>
+                     <td><%= ca.info%></td>
+                    <td><%=  ca.entry.try(:name)%></td>
+              
+                   
+                   <td>
+                   	<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/cases/<%=ca.id%>/edit">修改
+								</a> 
+								<%= link_to '删除', admin_case_path(ca), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+                   
+
+                   <%= link_to (ca.is_recommend? ? '取消推荐' : "推荐到首页"),recommend_admin_case_path(ca),class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+                    </td>
+                 </tr>
+
+					   <%end%>	
+
+						</tbody>
+						</table>
+						<%#=paginate @users%>
+
+
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+</div>
+
+
+
+
+

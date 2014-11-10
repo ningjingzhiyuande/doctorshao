@@ -2,6 +2,9 @@ class Project < ActiveRecord::Base
 	acts_as_list scope: [:is_special,:parent_id]
 	acts_as_tree
 	has_one :content, :as => :item
+	has_many :cases,:as=>:entry
+	has_many :questions,:as=>:entry
+	has_one :person_card,:as=>:entry
 	accepts_nested_attributes_for :content, allow_destroy: true 
 	mount_uploader :image,ImageUploader
 

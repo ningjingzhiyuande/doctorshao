@@ -20,28 +20,19 @@
       <header>
         <h1><span>美容咨询</span> News</h1>
       </header>
+      <%@zixun.each do |z|%>
       <div class="in_news_h">
-        <h2><a href="#">一站式祛斑美白，快享速美体验，重获年轻容易</a></h2>
-        <p>一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白</p>
+        <h2><%=link_to z.title,z%></h2>
+        <p><%=z.content.body%></p>
       </div>
-      <div class="in_news_h">
-        <h2><a href="#">植物基因美胸系列</a></h2>
-        <p>一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白一站式祛斑美白</p>
-      </div>
+      <%end unless @zixun.blank?%>
+      
       <div class="in_newslist">
         <ul>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
-          <li><a href="#">不敢抬头挺胸，你失之交臂了</a></li>
+        	<%@articles.each do |a|%>
+          <li><%=link_to a.title,a%></li>
+          <%end%>
+        
         </ul>
       </div>
     </section>
@@ -104,29 +95,17 @@
     <section class="cgal">
       <header>
         <h1><a href="#">成功案例</a></h1>
-        <span><a href="#">MORE+</a></span> </header>
+        <span><a href="/cases">MORE+</a></span> </header>
       <div class="in_cgallist">
         <ul>
+          <%@cases.each do |ca|%>
           <li>
-            <div  class="beforeimg"> <img src="images/img06.gif"  width="150" height="180" alt=""><span class="tr1s"><a href="#">before</a></span> </div>
-            <div class="afterimg"> <img src="images/img07.gif"   width="150" height="180" alt=""> <span class="tr1s"><a href="#">after</a></span> </div>
-            <h2><a href="#">蝶变故事</a></h2>
+            <div  class="beforeimg"> <%=image_tag ca.before_image_url,width: "150",height: "180"%><span class="tr1s">术前</span> </div>
+            <div class="afterimg">  <%=image_tag ca.after_image_url,width: "150",height: "180"%><span class="tr1s">术后</span> </div>
+            <h2><%=ca.title%></h2>
           </li>
-          <li>
-            <div  class="beforeimg"> <img src="images/img06.gif"  width="150" height="180" alt=""> <span class="tr1s"><a href="#">before</a></span> </div>
-            <div class="afterimg"> <img src="images/img07.gif"   width="150" height="180" alt=""> <span class="tr1s"><a href="#">after</a></span> </div>
-            <h2><a href="#">蝶变故事</a></h2>
-          </li>
-          <li>
-            <div  class="beforeimg"> <img src="images/img06.gif"  width="150" height="180" alt=""> <span class="tr1s"><a href="#">before</a></span> </div>
-            <div class="afterimg"> <img src="images/img07.gif"   width="150" height="180" alt=""> <span class="tr1s"><a href="#">after</a></span> </div>
-            <h2><a href="#">蝶变故事</a></h2>
-          </li>
-          <li>
-            <div  class="beforeimg"> <img src="images/img06.gif"  width="150" height="180" alt=""> <span class="tr1s"><a href="#">before</a></span> </div>
-            <div class="afterimg"> <img src="images/img07.gif"   width="150" height="180" alt=""> <span class="tr1s"><a href="#">after</a></span> </div>
-            <h2><a href="#">蝶变故事</a></h2>
-          </li>
+          <%end%>
+        
         </ul>
       </div>
     </section>

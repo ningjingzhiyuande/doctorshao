@@ -1,16 +1,22 @@
 Doctorshao::Application.routes.draw do
 
-
-
-
+  resources :articles
   get "admin"=>"admin/home#images"
 
   get "dingzhi" => "projects#dingzhi"
  # get "projects/:id"=>"projects#show"
 
   get "contact_us" => "home#contact_us"
-  resources :projects,:only=>[:show,:index]
-  resources :pages
+  concern :casable do 
+    resources :cases
+  end
+  resources :projects,  concerns: [:casable],:only=>[:show,:index]
+  resources :cases,:only=>[:show,:index]
+
+
+
+  resources :pages,:only=>[:show]
+  
   resources "facials" ,as: "other_project"
 
   root "home#index"
@@ -24,9 +30,30 @@ Doctorshao::Application.routes.draw do
 
   namespace :admin do 
 
-  	 resources :articles
+  	concern :casable do 
+      resources :cases
+  	end
+    resources :cases do 
+        member do
+          get :recommend
+        end
+    end
+    resources :questions
+  	concern :questionable do 
+      resources :questions
+  	end
+
+  	concern :person_cardable do 
+      resources :person_cards
+  	end
+
+  	 resources :articles do 
+       member do
+         get :recommend
+       end
+  	 end
   	 resources :pages
-  	 resources :projects do
+  	 resources :projects , concerns: [:casable,:person_cardable,:questionable] do
         collection do
            get :other
         end

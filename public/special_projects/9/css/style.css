@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+.banner{ height:446px; width:100%; overflow:hidden }
+
+
+.click_nav{ width:100%; height:198px; background:#99dad6 ;}
+
+.click_nav .navone{ width:200px; height:198px; float:left; overflow:hidden}
+.click_nav .nav01{ background:#64b4bb}
+.click_nav .nav01 h1{ font-size:30px; color:#fff; font-weight:normal; padding:50px 0px 0px 20px}
+.click_nav .nav01 h1 span{ display:block;}
+.click_nav .nav01 h1 .nav01_span01{ font-size:18px;}
+.click_nav .nav01 h1 .nav01_span02{ font-size:12px; font-family:"Book Antiqua"}
+.click_nav .nav02{ background:url(../images/img01.jpg)}
+.click_nav  .navone  h2{  font-size:14px; color:#fff; margin:70px 0px 5px 10px;}
+.click_nav  .navone  a{ font-size:24px; color:#fff; font-weight:bold; margin-left:10px;}
+.click_nav  .navone  a:hover{ color:#99dad6}
+.click_nav .nav03{ background:url(../images/img02.jpg)}
+.click_nav .nav04{ background:url(../images/img03.jpg)}
+.click_nav .nav05{ background:url(../images/img04.jpg)}
+
+
+.park01_header{ height:96px; background:url(../images/bk02.jpg) repeat-x bottom; width:100%; position:relative}
+
+.prak01_title { width:740px; height:96px; background: url(../images/title01bk.jpg) no-repeat center left; padding-left:20px; overflow:hidden}
+.prak01_title h2{ font-size:18px; color:#38b1a8; font-weight:normal; margin:20px 0px 0px 50px; }
+.prak01_title p{ font-size:12px; text-indent:32px; line-height:22px; padding-right:20px}
+.park01_tel { width:240px; height:90px; position:absolute; right:0px; top:0px; background:url(../images/bk01.jpg) no-repeat center left}
+.park01_tel_box{ width:220px; height:90px; overflow:hidden; padding-left:20px; background:url(../images/telbk.jpg) no-repeat center right}
+.park01_tel_box h3{ font-size:14px; color:#838383; margin-top:20px}
+.park01_tel_box p.tel{ font-size:16px;  color:#38b1a8;}
+.park01_tel_box p.tel span{ font-family:"Constantia"; font-size:24px;}
+.park01_tel_box p{ font-size:14px; line-height:20px;}
+
+.park01_nr{ height:500px;}
+.park01_left{ width:526px; height:500px; float:left}
+.park01_right{ width:474px; height:500px; float:left}
+.park01_left ul li { height:90px; overflow:hidden}
+.park01_left ul li h2{ float:right; font-size:14px; background:#ff6c04; color:#fff; padding:3px 20px;}
+.park01_left ul li h2 a{ color:#fff}
+.park01_left ul li p{ font-size:14px; font-weight:bold; line-height:22px; color:#898888}
+
+.park01_left ul li.park01_left_li04{ height:115px;}
+
+
+/***********/
+
+.park02{ width:100%; height:630px; overflow:hidden; background:#ffe6d7}
+.park02_left{ width:422px; float:left; height:630px;}
+.park02_right{ width:578px; height:630px; float:left}
+
+.park02_title{ background:url(../images/title02bk.jpg); width:578px; height:115px; overflow:hidden}
+.park02_title h2{ font-size:30px; color:#d26d93; margin:20px 0px 0px 100px; }
+.park02_title p{ font-size:12px; line-height:26px; margin-left:30px; text-indent:32px;}
+
+.park02_three_type ul li{ width:182px; float:left; margin:5px; display:inline}
+.park02_three_type ul li h3{ height:30px; line-height:30px; font-size:12px; color:#d26d93}
+.park02_three_type ul li p{  font-size:12px; line-height:22px;}
+
+.park02_concept{ height:115px; width:578px; background:url(../images/bk03.jpg)}
+.park02_concept ul li {  float:left; width:110px; height:98px; overflow:hidden; background:#000; margin:8px 2px 0px 3px; display:inline }
+.park02_concept ul li h2{ text-align:center;  color:#fff; font-size:18px; margin-top:20px;}
+.park02_concept ul li h2 span{ display:block; font-weight:normal; font-size:14px;}
+
+.park02_pre_end ul li{ width:182px; float:left;margin:5px; display:inline}
+.park02_pre_end ul li div div{ float:left; width:91px; height:106px; overflow:hidden; }
+.park02_pre_end ul li h3{ font-size:14px; text-align:center; color:#8a1d46; font-weight:normal; line-height:28px;}
+
+
+/************************/
+.park03{ height:668px; overflow:hidden}
+.park03_left{ width:522px; float:left}
+.park03_title{ width:522px; height:112px; background:url(../images/title03bk.jpg) no-repeat center left}
+.park03_title h2{padding:50px 0px 0px 90px; font-size:30px; color:#623605;}
+.park03_title h2 span{ font-size:18px; }
+.park03_left .des{ font-size:12px; line-height:24px; color:#623605}
+
+.park03_question_list ul li{ background:url(../images/bk04.jpg)  left repeat-y; padding-bottom:3px}
+.park03_question_list ul li h3{ font-size:16px; color:#825d3f}
+.park03_question_list ul li h3 span{ display:block ; height:21px; width:21px; text-align:center; font-size:16px; background:url(../images/bk05.jpg); color:#fff; font-weight:normal; float:left; margin-right:5px; display:inline}
+.park03_question_list ul li p{ font-size:12px; line-height:22px; padding-left:25px;}
+.park03_question_list ul li p a{ font-weight:bold; color:#623605}
+
+.park03_right{ float:left}
+/****************/
+.park04{ width:100%; height:480px; background:#99dad6}
+.par04_left{ width:484px; float:left; height:480px; overflow:hidden; }
+
+.park004_right{ float:right; width:516px;}
+.park04_title{ background:url(../images/title04bk.jpg); width:512px; height:102px; margin-top:80px;}
+.park04_title h2{ font-size:30px; text-align:right; padding:40px 120px 0px 0px;}
+.park004_right p{ font-size:12px; line-height:26px; text-indent:32px;}
+
+
+
+
+

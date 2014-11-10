@@ -1,14 +1,15 @@
 class Admin::ArticlesController < Admin::ApplicationController
-   before_action :set_admin_article, only: [:show, :edit, :update, :destroy]
+   before_action :set_admin_article, only: [:show, :edit, :update, :destroy,:recommend]
   def index
   	@articles = Article.all
+  	@kind = params[:kind] || "xsjl"
   end
 
   def create
   	@article = Article.new(admin_article_params)  
     respond_to do |format|
       if @article.save
-        format.html { redirect_to admin_articles_url, notice: '创建成功' }
+        format.html { redirect_to "/admin/articles/"+(@article.kind||"xsjl"), notice: '创建成功' }
         format.json { render action: 'show', status: :created, location: @admin_article }
       else
         format.html { render action: 'new' }
@@ -19,6 +20,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def new
   	@article = Article.new
+  	@kind = params[:kind]
   end
 
   def edit
@@ -39,7 +41,14 @@ class Admin::ArticlesController < Admin::ApplicationController
   def show
   	
   end
- 
+ def recommend
+ 	@article.toggle!(:is_recommend)
+ 	respond_to do |format|
+        format.html { redirect_to :back, notice: '推荐成功' }
+        format.json { head :no_content }
+    end
+    
+ end
  def destroy
     @article.destroy
     redirect_to admin_articles_url, notice: '删除成功'
@@ -52,7 +61,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_article_params
-       params.require(:article).permit(:name,:info,:image,:is_special,{:content_attributes=>[:body]})
+       params.require(:article).permit(:title,:info,:image,:kind,:is_special,{:content_attributes=>[:body]})
     end
 
 end

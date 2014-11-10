@@ -13,10 +13,11 @@
   <% end %>
 <ul>
 	<li> 
+
 		<span class="width_align_right">项目名称</span> 
        <span class="width_content">
        	<%=f.text_field :name,class: "field error project_title text large"%>
-       	<%=f.hidden_field :is_special,value: false%>
+       	<%=f.hidden_field :is_special,value: @flag%>
        </span>
     </li>
     <li> 

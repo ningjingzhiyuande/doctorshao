@@ -17,7 +17,7 @@
 							<th>#ID</th>
 							<th>特色项目名称</th>
 							<th>特色项目简介</th>
-						    <th>内容</th> 			    
+								    
 						    <th>操作</th> 
 							
 						</tr> 
@@ -27,13 +27,25 @@
 						<tr>
 							<td class="center"><%=project.id%></td> 
 							<td><%=project.name%></td> 
-						    <td><%= project.info %></td> 
-						    <td><%= project.content.try(:body) %></td> 
+						    <td><%=raw  project.info %></td> 
+					
 	
 						    <td>
 								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/edit">修改
 								</a> 
 								<%= link_to '删除', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+                               <a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/cases/new">添加案例
+
+								</a> 
+
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/cases"> 查看成功案例
+
+								</a> 
+
+								   <a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/cases/new">编辑专家卡片
+
+								</a> 
+
 						
 							</td>
 					

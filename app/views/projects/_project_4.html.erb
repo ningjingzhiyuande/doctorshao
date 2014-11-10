@@ -1,129 +1,37 @@
 <%= stylesheet_link_tag    "/special_projects/#{params[:id]}/css/style"%>
-<div class="banner"> <a href="#"> <img src="/special_projects/4/images/banner.png" width="100%"> </a> </div>
-<div class="wrap this_wrap">
-	
-<div class="blank30"></div>
-<section class="park01">
-<div class="park01_left">
-	<header>
-		<h1><img src="/special_projects/4/images/h1_1.png" width="625" height="55" alt="邵氏鼻综合整形术   只为完美新生"></h1>
-	</header>
-	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邵氏鼻综合整形术通过放置假体和或自身软骨，调整鼻部软骨形态，移动鼻骨，达到改善鼻梁的高度，缩小鼻头，垫高鼻尖，增强鼻小柱，缩小鼻翼的作用。</p>
-	<div class="blank30"></div>
-	<p>主要适合下列爱美人群：<br />
-　　&nbsp;&nbsp;&nbsp;1、脸形：最适合韩式鼻的脸形是椭圆的脸形，这与又直又高的韩式鼻搭配得恰倒好处。至于方形脸、长脸和国字脸都不适合，搭配起来使脸形方的更显方、长的更显长。<br />
-　　&nbsp;&nbsp;&nbsp;2、眼间距：眼间距较宽的才适合隆韩式鼻，短的眼间距会使又高又直的韩式鼻显得很生硬。<br />
-　　&nbsp;&nbsp;&nbsp;3、鼻尖形态不佳：鼻孔扁平，圆形鼻孔，狮子鼻孔及鼻孔过大及鼻孔过小，甚至闭锁。<br />
-</p>
-</div>
-<div class="park01_right">
-	<img src="/special_projects/4/images/img01.png" width="340" height="288" alt="邵氏鼻综合整形手术">
-	<span class="artical_span park01_right_span ie6png"></span>
-</div>
-	
-</section>
-<div class="blank30"></div>
-<div class="blank20"></div>
-<section class="park02">
-	<header><h1><img src="/special_projects/4/images/h1_2.png" alt="邵氏鼻综合整形术四大特点"></h1></header>
-<div class="blank20"></div>
-	<ul>
-	<li>
-	  <div class="park02_header">
-	  	<h2 class="park02_h2_01">协调性</h2>
-	  </div>
-	  <div class="blank30"></div>
-	   <img src="/special_projects/4/images/img02.png" width="338" height="86" alt="协调性">
-	  <div class="blank30"></div>
-	  <p>改善鼻梁达到理想的鼻梁高度和宽度，改善鼻部和面部的协调性。</p>
-	</li>	
-	<li>
-	  <div class="park02_header">
-	  	<h2 class="park02_h2_02">突出、挺翘</h2>
-	  </div>
-	  <div class="blank30"></div>
-	   <img src="/special_projects/4/images/img02.png" width="338" height="86" alt="突出、挺翘">
-	  <div class="blank30"></div>
-	  <p>通过使用和调整软骨，有效防止鼻头发红或皮肤变薄，使鼻头微翘，突出鼻尖表现点。</p>
-	</li>	
-	<li>
-	  <div class="park02_header">
-	  	<h2 class="park02_h2_03">形态美观</h2>
-	  </div>
-	  <div class="blank30"></div>
-	   <img src="/special_projects/4/images/img02.png" width="338" height="86" alt="形态美观">
-	  <div class="blank30"></div>
-	  <p>调整鼻孔鼻翼形态，使鼻孔形态美观自然，鼻翼弧线流畅。</p>
-	</li>	
-	<li>
-	  <div class="park02_header">
-	  	<h2 class="park02_h2_04">技术成熟、安全</h2>
-	  </div>
-	  <div class="blank30"></div>
-	   <img src="/special_projects/4/images/img02.png" width="338" height="86" alt="技术成熟、安全">
-	  <div class="blank30"></div>
-	  <p>切口小、恢复期短、技术成熟、安全、不影响工作和学习。</p>
-	</li>	
-	
-		
-	</ul>
-	
-	
-	
-</section>
+<%=raw @project.content.try(:body)%>
 <div class="blank10"></div>
-<section class="park03">
- <header><h1><img src="/special_projects/4/images/h1_3.png" alt="邵氏鼻综合整形术经典案例"></h1></header>
+
+<div class="park03">
+ <div class="header"><h1><img src="/special_projects/4/images/h1_3.png" alt="邵氏鼻综合整形术经典案例"></h1></div class="header">
 	<div class="blank30"></div>
 		<div class="blank30"></div>
 		
 <ul>
-<li>
-	<div class="park03_li01_head park03_li_head">
-      <h2>刘丽丽</h2>
+	<%@cases.each do |ca|%>
+			<li>
+				<div class="park03_li01_head park03_li_head">
+      <h2><%=ca.title%></h2>
       <div class="park03_li_img">
-        <img src="/special_projects/4/images/img06.png" width="135" height="135" alt="">
+      	<%=image_tag ca.after_image,width: "135",height: "135"%>
+       
          <span  class="artical_span park03_li_span ie6png" > </span>
       </div>
     </div>
     
-	<p>案例介绍案例介，绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍，案例介绍案例介绍案例介，绍介绍案例介绍。...<a href="#">[详细]</a></p>
-</li>
-<li>
-	<div class="park03_li02_head park03_li_head">
-      <h2>刘丽丽</h2>
-      <div class="park03_li_img">
-        <img src="/special_projects/4/images/img07.png" width="135" height="135" alt="">
-         <span  class="artical_span park03_li_span ie6png" > </span>
-      </div>
-    </div>
-	<p>案例介绍案例介，绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍，案例介绍案例介绍案例介，绍介绍案例介绍。...<a href="#">[详细]</a></p>
-</li>
-<li style="border: none;">
-	<div class="park03_li03_head park03_li_head">
-      <h2>刘丽丽</h2>
-      <div class="park03_li_img">
-        <img src="/special_projects/4/images/img08.png" width="135" height="135" alt="">
-         <span  class="artical_span park03_li_span ie6png" > </span>
-      </div>
-    </div>
-	<p>案例介绍案例介，绍案例介绍案例介绍案例介绍案例介绍案例介绍案例介绍，案例介绍案例介绍案例介，绍介绍案例介绍。...<a href="#">[详细]</a></p>
-</li>
-	
-	
+	<p><%=ca.info%></p>
+
+    
+            <%end%>
+
+
 </ul>		
 	
-</section>
-<div class="blank30"></div>
-<div class="blank30"></div>
-
-<section class="park04 person_card">
-	<header><h1><img src="/special_projects/4/images/h1_4.png" alt="邵氏鼻综合整形术 — 权威专家"></h1></header>
-<div class="blank30"></div>
-<div class="blank20"></div>	
-<%=render "/projects/person_card"%>
-<div class="blank30"></div>
-<div class="blank30"></div>
-
-</section>
 </div>
+
+<div class="blank30"></div>
+<div class="blank30"></div>
+
+
+<%=render "/projects/person_card"%>
+

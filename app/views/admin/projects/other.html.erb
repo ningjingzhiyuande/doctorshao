@@ -20,8 +20,8 @@
 							<th width=5%>#ID</th>
 							<th width=15%>项目名称</th>
 					
-						    <th>内容</th> 			    
-						    <th width=25%>操作</th> 
+								    
+						    <th %>操作</th> 
 							
 						</tr> 
 						</thead> 
@@ -30,16 +30,29 @@
 						<tr>
 							<td class="center red"><%=project.id%></td> 
 							<td class="red"><%=project.name%></td> 
-				
-						    <td><%= project.content.try(:body) %></td> 
+				 
 	
 						    <td>
+						    	<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/facials/<%=project.id%>" target="blank"> 查看
+								</a> 
 								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/edit">修改
 								</a> 
 								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip look_more" data-id=<%=project.id%> title="Edit this example" href="#">查看子项目
 								</a> 
 
 								<%= link_to '删除', admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' },class: "btn_no_text btn ui-state-default ui-corner-all tooltip" %>
+								 <a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/cases/new">添加案例
+
+								</a> 
+
+								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/cases"> 查看成功案例
+
+								</a> 
+
+								 <a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=project.id%>/questions/new">添加疑问
+
+								</a> 
+
 							</td>			
 						</tr> 
 						<%project.children.each do |p|%>
@@ -47,9 +60,11 @@
 							<td class="center"><%=p.id%></td> 
 							<td><span class="red"><%=project.name%></span>---<%=p.name%></td> 
 				
-						    <td><%= p.content.try(:body) %></td> 
+						
 	
 						    <td>
+						    	<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/facials/<%=p.id%>" target="blank"> 查看
+								</a> 
 								<a class="btn_no_text btn ui-state-default ui-corner-all tooltip" title="Edit this example" href="/admin/projects/<%=p.id%>/edit">修改
 								</a> 
 								
