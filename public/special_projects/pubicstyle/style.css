@@ -95,3 +95,11 @@ img{ border:0;}
 
 
 .artical_span{ display:block; position:absolute;left:0px; top:0px;}
+
+/*****************************************/
+.piao_tsxm{ background:url(/special_projects/publicimg/piaobk.png); width:140px; height:450px;position:fixed; top:179px; left:0px;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))}
+.piao_tsxm h2{ margin-left:5px; padding-left:15px;}
+.piao_tsxm h2 a{ font-size:12px; color:#fff;  line-height:26px;  font-weight:normal}
+.piao_tsxm hgroup{ margin-top:60px;}
+.piao_tsxm h2{ background:url(/special_projects/publicimg/piao_h2_icon.png) no-repeat center left; }
+.piao_tsxm h2  a.now_cur{ color:#bad314}

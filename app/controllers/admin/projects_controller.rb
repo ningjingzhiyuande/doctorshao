@@ -11,9 +11,10 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   def create
   	@project = Project.new(admin_project_params)  
+  	path = "/admin/projects"+@projects.is_special ? "/" : "/other"
     respond_to do |format|
       if @project.save
-        format.html { redirect_to admin_projects_url, notice: '创建成功' }
+        format.html { redirect_to path, notice: '创建成功' }
         format.json { render action: 'show', status: :created, location: @admin_project }
       else
         format.html { render action: 'new' }
@@ -32,9 +33,10 @@ class Admin::ProjectsController < Admin::ApplicationController
   end
 
   def update
+  	path = "/admin/projects"+@projects.is_special ? "/" : "/other"
      respond_to do |format|
       if @project.update(admin_project_params)
-        format.html { redirect_to admin_projects_url, notice: '修改成功' }
+        format.html { redirect_to path, notice: '修改成功' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -1,2 +1,13 @@
 <%=render "project_#{params[:id]}"%>
 
+<div  class="piao_tsxm">
+     <hgroup>
+    <%@special_projects.each do |project|%>
+        <h2>  
+        	<%=link_to project.name,project,class: params[:id].to_i==project.id ? "now_cur" : " " %>
+        </h2>
+         <%end unless @special_projects.blank? %>
+     </hgroup>
+
+</div>
+
